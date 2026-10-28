@@ -1,0 +1,43 @@
+/* Installation invitation and platform guidance. */
+.nav-install { display: none; }
+.nav-install[hidden] { display: none !important; }
+@media (max-width: 768px) {
+  .navbar .nav-install { display: inline-flex; flex: 0 0 46px; width: 46px; height: 46px; margin-left: auto; margin-right: 9px; padding: 0; flex-direction: column; align-items: center; justify-content: center; gap: 4px; border: 1px solid rgba(216,179,107,.5); border-radius: 14px; background: rgba(216,179,107,.12); color: #e7c381; font-family: "Poppins", sans-serif; cursor: pointer; }
+  .nav-install i { font-size: 16px; }
+  .nav-install span { font-size: 6.5px; font-weight: 700; line-height: 1; }
+  .nav-install:focus-visible { outline: 3px solid #79b8ec; outline-offset: 3px; }
+  .nav-install:hover { background: rgba(216,179,107,.22); }
+}
+.app-install { display: flex; align-items: center; gap: 22px; margin: 30px auto; padding: 26px; width: min(100%, 1100px); border: 1px solid rgba(216,179,107,.28); border-radius: 20px; background: linear-gradient(120deg, #132738, #0c1927); }
+.app-install > img { flex-shrink: 0; border-radius: 14px; }
+.app-install > div { flex: 1; min-width: 0; }
+.app-install span { color: #d8b36b; font-size: .65rem; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
+.app-install h3 { margin: 6px 0; color: #f6efe2; font-family: "DM Serif Display", Georgia, serif; font-weight: 400; font-size: clamp(1.3rem, 2.2vw, 2rem); line-height: 1.2; }
+.app-install p { margin: 0; color: #b4c0cb; font-size: .82rem; line-height: 1.6; }
+.app-install button { flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; gap: 9px; min-height: 46px; padding: 12px 20px; border: 1px solid #d8b36b; border-radius: 12px; background: #d8b36b; color: #101c2a; font: 700 .82rem "Poppins", sans-serif; cursor: pointer; }
+.app-install button[hidden] { display: none; }
+.app-install button:hover { background: #e9c888; }
+.app-install button:focus-visible, .app-install-dialog__close:focus-visible { outline: 3px solid #79b8ec; outline-offset: 4px; }
+.app-install-dialog { position: fixed; inset: 0; margin: auto; box-sizing: border-box; width: min(450px, calc(100% - 32px)); max-height: calc(100dvh - 40px); padding: 30px; overflow-y: auto; border: 1px solid rgba(216,179,107,.4); border-radius: 24px; background: #101e2e; color: #c5d0da; box-shadow: 0 24px 80px rgba(0,0,0,.5); }
+.app-install-dialog::backdrop { background: rgba(3,10,18,.8); }
+.app-install-dialog > img { border-radius: 16px; }
+.app-install-dialog h3 { color: #f6efe2; font-family: "DM Serif Display", Georgia, serif; font-size: 1.8rem; font-weight: 400; line-height: 1.2; margin: 20px 0 14px; }
+.app-install-dialog p { font-size: .9rem; line-height: 1.8; }
+.app-install-dialog .app-install-dialog__note { margin-top: 22px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,.1); color: #a7b5c3; font-size: .75rem; }
+.app-install-dialog__close { position: absolute; right: 15px; top: 15px; width: 44px; height: 44px; border: 1px solid rgba(216,179,107,.25); border-radius: 12px; color: #d8b36b; background: #172839; font-size: 26px; cursor: pointer; }
+.app-install-steps { margin: 20px 0; padding-left: 26px; }
+.app-install-steps[hidden] { display: none; }
+.app-install-steps li { padding: 8px 0 8px 7px; font-size: .85rem; line-height: 1.6; }
+.app-install-steps li::marker { color: #d8b36b; font-weight: 700; }
+.app-install-steps strong { display: block; color: #f6efe2; }
+.app-install-steps span { display: block; margin-top: 4px; color: #aebdcb; font-size: .78rem; }
+.app-install-dialog__done { width: 100%; min-height: 46px; padding: 12px 16px; border: 0; border-radius: 12px; background: #d8b36b; color: #101c2a; font: 700 .85rem "Poppins", sans-serif; cursor: pointer; }
+.app-install-dialog__done:focus-visible { outline: 3px solid #79b8ec; outline-offset: 4px; }
+[data-install-app]:disabled { opacity: .6; cursor: wait; }
+@media (max-width: 600px) {
+  .app-install { flex-wrap: wrap; gap: 16px; padding: 20px; }
+  .app-install > img { width: 52px; height: 52px; }
+  .app-install > div { flex-basis: calc(100% - 68px); }
+  .app-install button { width: 100%; }
+  .app-install-dialog { padding: 24px; }
+}

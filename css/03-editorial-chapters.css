@@ -1,0 +1,4303 @@
+/* =========================================================
+   DESCOPERĂ BUSTUCHIN — MONOGRAFIE DIGITALĂ
+========================================================= */
+#descopera-bustuchin {
+  position: relative;
+  overflow: hidden;
+  padding-top: 130px;
+  padding-bottom: 120px;
+}
+/* =========================================================
+   CONTAINER LAT
+========================================================= */
+#descopera-bustuchin > .container {
+  width: 94%;
+  max-width: 1550px;
+  margin-inline: auto;
+}
+/* =========================================================
+   FUNDAL
+========================================================= */
+#descopera-bustuchin::after {
+  content: "";
+  position: absolute;
+  top: 10%;
+  right: -15%;
+  width: 650px;
+  height: 650px;
+  border-radius: 50%;
+  background:
+    radial-gradient(
+      circle,
+      rgba(37, 99, 235, .13),
+      transparent 68%
+    );
+  filter: blur(20px);
+  pointer-events: none;
+}
+/* =========================================================
+   HEADER
+========================================================= */
+.discover-header {
+  position: relative;
+  z-index: 2;
+  max-width: 1100px;
+  margin:
+    0 auto
+    70px;
+  text-align: center;
+}
+/* Folosim kickerul existent */
+.discover-header
+.section-kicker-top {
+  margin-bottom: 32px;
+}
+.discover-title {
+  margin: 0;
+  font-family:
+    "DM Serif Display",
+    serif;
+  font-size:
+    clamp(2.7rem, 5vw, 5.5rem);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -.025em;
+}
+.discover-title span {
+  display: block;
+  margin-top: 12px;
+  color: #93c5fd;
+  font-style: italic;
+  font-size: .72em;
+}
+.discover-lead {
+  max-width: 760px;
+  margin:
+    28px auto
+    0;
+  color: var(--muted);
+  font-size:
+    1rem;
+  line-height:
+    1.9;
+}
+/* =========================================================
+   LAYOUT PRINCIPAL
+========================================================= */
+.discover-layout {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1.08fr)
+    minmax(0, .92fr);
+  align-items: stretch;
+  gap: 48px;
+}
+/* =========================================================
+   MEDIA
+========================================================= */
+.discover-media {
+  position: relative;
+  min-height: 640px;
+  overflow: hidden;
+  border:
+    1px solid rgba(255, 255, 255, .10);
+  border-radius:
+    32px;
+  background:
+    #0f172a;
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, .35);
+}
+.discover-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      to top,
+      rgba(2, 6, 23, .92) 0%,
+      rgba(2, 6, 23, .25) 45%,
+      rgba(2, 6, 23, .05) 75%
+    );
+  pointer-events: none;
+}
+.discover-media img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+  transition:
+    transform 1s cubic-bezier(.22, 1, .36, 1);
+}
+.discover-media:hover img {
+  transform:
+    scale(1.045);
+}
+/* =========================================================
+   TEXT PESTE IMAGINE
+========================================================= */
+.discover-media__overlay {
+  position: absolute;
+  left: 34px;
+  right: 34px;
+  bottom: 34px;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+.discover-media__eyebrow {
+  margin-bottom: 7px;
+  color:
+    #93c5fd;
+  font-size:
+    .68rem;
+  font-weight:
+    600;
+  letter-spacing:
+    .15em;
+  text-transform:
+    uppercase;
+}
+.discover-media__overlay strong {
+  font-family:
+    "DM Serif Display",
+    serif;
+  font-size:
+    clamp(2rem, 3vw, 3.5rem);
+  font-weight:
+    400;
+}
+.discover-media__overlay > span:last-child {
+  color:
+    rgba(255, 255, 255, .68);
+  font-size:
+    .8rem;
+}
+/* =========================================================
+   LABEL IMAGINE
+========================================================= */
+.discover-media__label {
+  position: absolute;
+  top: 22px;
+  left: 22px;
+  z-index: 4;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding:
+    9px 13px;
+  border:
+    1px solid rgba(255, 255, 255, .12);
+  border-radius:
+    999px;
+  background:
+    rgba(15, 23, 42, .75);
+  backdrop-filter:
+    blur(12px);
+  color:
+    rgba(255, 255, 255, .9);
+  font-size:
+    .68rem;
+}
+.discover-media__label i {
+  color:
+    #60a5fa;
+}
+/* =========================================================
+   CONȚINUT
+========================================================= */
+.discover-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding:
+    clamp(15px, 3vw, 45px)
+    0;
+}
+.discover-content h3 {
+  max-width: 650px;
+  margin:
+    20px 0
+    30px;
+  font-family:
+    "DM Serif Display",
+    serif;
+  font-size:
+    clamp(2rem, 3.2vw, 3.6rem);
+  font-weight:
+    400;
+  line-height:
+    1.06;
+}
+.discover-content p {
+  max-width: 680px;
+  margin-bottom:
+    19px;
+  color:
+    #cbd5e1;
+  font-size:
+    .94rem;
+  line-height:
+    1.9;
+}
+/* Prima literă / primul paragraf puțin mai important */
+.discover-content p:first-of-type {
+  color: white;
+  font-size:
+    1.02rem;
+}
+/* =========================================================
+   LINK
+========================================================= */
+.discover-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 15px;
+  padding:
+    13px 19px;
+  border:
+    1px solid rgba(96, 165, 250, .28);
+  border-radius:
+    999px;
+  background:
+    rgba(37, 99, 235, .10);
+  color:
+    white;
+  text-decoration:
+    none;
+  font-size:
+    .78rem;
+  font-weight:
+    600;
+  transition:
+    var(--transition);
+}
+.discover-link i {
+  color:
+    #60a5fa;
+  transition:
+    transform .3s ease;
+}
+.discover-link:hover {
+  transform:
+    translateY(-3px);
+  background:
+    rgba(37, 99, 235, .18);
+  border-color:
+    rgba(96, 165, 250, .55);
+}
+.discover-link:hover i {
+  transform:
+    translateX(5px);
+}
+/* =========================================================
+   STATISTICI
+========================================================= */
+#descopera-bustuchin
+.discover-stats {
+  position: relative;
+  z-index: 3;
+  display: grid;
+  grid-template-columns:
+    repeat(4, 1fr);
+  gap: 12px;
+  width: 100%;
+  margin:
+    70px 0
+    0;
+}
+#descopera-bustuchin
+.discover-stats
+.stats__item {
+  min-width: 0;
+  padding:
+    22px 14px;
+  border-radius:
+    20px;
+}
+#descopera-bustuchin
+.discover-stats
+.stats__number {
+  margin-bottom:
+    8px;
+  font-family:
+    "DM Serif Display",
+    serif;
+  font-size:
+    clamp(2rem, 3vw, 3rem);
+  font-weight:
+    400;
+}
+#descopera-bustuchin
+.discover-stats
+.stats__label {
+  font-size:
+    .7rem;
+  letter-spacing:
+    .03em;
+}
+/* =========================================================
+   METEO SEPARAT
+========================================================= */
+.discover-weather {
+  padding-top:
+    30px;
+}
+/* =========================================================
+   PAGE SCROLL PROGRESS
+========================================================= */
+.scroll-progress {
+  position: fixed;
+  top: var(--nav-h);
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 2px;
+  background:
+    rgba(255, 255, 255, .035);
+  pointer-events: none;
+}
+/* =========================================================
+   PROGRESS BAR
+========================================================= */
+.scroll-progress__bar {
+  width: 0%;
+  height: 100%;
+  position: relative;
+  background:
+    linear-gradient(
+      90deg,
+      #2563eb,
+      #60a5fa
+    );
+  box-shadow:
+    0 0 10px rgba(96, 165, 250, .45);
+  transition:
+    width .08s linear;
+  will-change:
+    width;
+}
+/* =========================================================
+   MICĂ LUMINĂ ÎN CAPĂTUL BAREI
+========================================================= */
+.scroll-progress__bar::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background:
+    #93c5fd;
+  box-shadow:
+    0 0 10px #60a5fa,
+    0 0 18px rgba(96, 165, 250, .65);
+  transform:
+    translate(50%, -50%);
+}
+/* =========================================================
+   NAVBAR — CAPITOL ACTIV LA SCROLL
+========================================================= */
+/* Dropdown activ ca secțiune curentă */
+.nav__dropdown.current-section
+.dropdown-trigger {
+  position: relative;
+  color: #93c5fd;
+  background:
+    rgba(37, 99, 235, .07);
+}
+/* ICON */
+.nav__dropdown.current-section
+.dropdown-trigger > span > i {
+  color: #60a5fa;
+}
+/* LINIE SUB CAPITOL */
+.nav__dropdown.current-section
+.dropdown-trigger::after {
+  content: "";
+  position: absolute;
+  left: 18%;
+  right: 18%;
+  bottom: 4px;
+  height: 2px;
+  border-radius: 999px;
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      #60a5fa,
+      transparent
+    );
+  box-shadow:
+    0 0 8px rgba(96, 165, 250, .45);
+  animation:
+    navSectionAppear .35s ease forwards;
+}
+/* LINK DIRECT ACTIV — ex. INFRASTRUCTURĂ */
+.nav__links > a.current-section {
+  position: relative;
+  color: #93c5fd;
+  background:
+    rgba(37, 99, 235, .07);
+}
+.nav__links > a.current-section i {
+  color: #60a5fa;
+}
+.nav__links > a.current-section::after {
+  content: "";
+  position: absolute;
+  left: 18%;
+  right: 18%;
+  bottom: 4px;
+  height: 2px;
+  border-radius: 999px;
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      #60a5fa,
+      transparent
+    );
+  box-shadow:
+    0 0 8px rgba(96, 165, 250, .45);
+}
+/* APARIȚIE */
+@keyframes navSectionAppear {
+  from {
+    opacity: 0;
+    transform:
+      scaleX(.35);
+  }
+  to {
+    opacity: 1;
+    transform:
+      scaleX(1);
+  }
+}
+/* =========================================================
+   TITLURI SATE
+========================================================= */
+.section--villages
+.section-block__title {
+  font-size:
+    clamp(2.5rem, 4.5vw, 4.5rem);
+  font-style:
+    italic;
+}
+/* =========================================================
+   EDITORIAL CONTENT SYSTEM
+   SATE · ISTORIE · GEOGRAFIE · TURISM
+========================================================= */
+/* =========================================================
+   1. SPAȚIERE GENERALĂ
+========================================================= */
+.section--villages .villages,
+.section--history .section-content,
+.section--geografie .section-content,
+.section--turism .section-content {
+  gap:
+    clamp(90px, 9vw, 150px);
+}
+/* =========================================================
+   6. TITLURI
+========================================================= */
+.section--villages
+.section-block__title,
+.section--history
+.section-block__title,
+.section--geografie
+.section-block__title,
+.section--turism
+.section-block__title {
+  margin-top:
+    16px;
+}
+/* SATELE POT FI PUȚIN MAI SPECTACULOASE */
+.section--villages
+.section-block__title {
+  font-size:
+    clamp(2.7rem, 4.4vw, 4.6rem);
+  font-style:
+    italic;
+}
+/* =========================================================
+   7. TEXT
+========================================================= */
+.section--villages
+.section-block__text,
+.section--history
+.section-block__text,
+.section--geografie
+.section-block__text,
+.section--turism
+.section-block__text {
+  color:
+    #aebbd0;
+  line-height:
+    1.95;
+  transition:
+    color .35s ease;
+}
+@media (hover:hover) and (pointer:fine) {
+  .section--villages
+  .village:hover
+  .section-block__text,
+  .section--history
+  .split-layout:hover
+  .section-block__text,
+  .section--geografie
+  .split-layout:hover
+  .section-block__text,
+  .section--turism
+  .split-layout:hover
+  .section-block__text {
+    color:
+      #cbd5e1;
+  }
+}
+/* =========================================================
+   8. IMAGINI / VIDEO — ASPECT MAI EDITORIAL
+========================================================= */
+.section--villages
+.media-frame,
+.section--history
+.media-frame,
+.section--geografie
+.media-frame,
+.section--turism
+.media-frame {
+  position:
+    relative;
+  border-radius:
+    28px;
+  border:
+    1px solid rgba(255, 255, 255, .09);
+  box-shadow:
+    0 26px 65px rgba(0, 0, 0, .30);
+}
+/* MICĂ LUMINĂ LA MARGINE */
+.section--villages
+.media-frame::after,
+.section--history
+.media-frame::after,
+.section--geografie
+.media-frame::after,
+.section--turism
+.media-frame::after {
+  content:
+    "";
+  position:
+    absolute;
+  inset:
+    0;
+  z-index:
+    3;
+  border-radius:
+    inherit;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, .025);
+  pointer-events:
+    none;
+}
+/* =========================================================
+   9. IMAGINE — HOVER MAI FIN
+========================================================= */
+@media (hover:hover) and (pointer:fine) {
+  .section--villages
+  .media-frame:hover img,
+  .section--history
+  .media-frame:hover img,
+  .section--geografie
+  .media-frame:hover img,
+  .section--turism
+  .media-frame:hover img {
+    transform:
+      scale(1.035);
+  }
+}
+/* =========================================================
+   10. ACCENT DIFERIT PE CAPITOLE
+========================================================= */
+/* SATE — ALBASTRU */
+.section--villages {
+  --chapter-accent:
+    96, 165, 250;
+}
+/* ISTORIE — AURIU DISCRET */
+.section--history {
+  --chapter-accent:
+    245, 158, 11;
+}
+/* GEOGRAFIE — VERDE */
+.section--geografie {
+  --chapter-accent:
+    52, 211, 153;
+}
+/* TURISM — CYAN */
+.section--turism {
+  --chapter-accent:
+    34, 211, 238;
+}
+/* =========================================================
+   11. CULOAREA LINIEI DE SUB TITLU
+========================================================= */
+.section--villages
+.section-block__title::after,
+.section--history
+.section-block__title::after,
+.section--geografie
+.section-block__title::after,
+.section--turism
+.section-block__title::after {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(var(--chapter-accent), .95),
+      rgba(var(--chapter-accent), 0)
+    );
+  box-shadow:
+    0 0 12px rgba(var(--chapter-accent), .20);
+}
+/* =========================================================
+   GRĂDINIȚA CU PROGRAM PRELUNGIT
+   ROL ȘI FACILITĂȚI — PREMIUM CARDS
+========================================================= */
+#gradinita-program-prelungit .info-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  width: 100%;
+  margin-top: 55px;
+}
+/* =========================================================
+   CARD
+========================================================= */
+#gradinita-program-prelungit .info-card {
+  --card-accent: 96, 165, 250;
+  position: relative;
+  min-width: 0;
+  min-height: 290px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding:
+    30px 28px 28px;
+  overflow: hidden;
+  border:
+    1px solid rgba(255, 255, 255, .08);
+  border-radius:
+    28px;
+  background:
+    radial-gradient(
+      circle at 0% 0%,
+      rgba(var(--card-accent), .11),
+      transparent 42%
+    ),
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, .045),
+      rgba(255, 255, 255, .012)
+    );
+  box-shadow:
+    0 22px 55px rgba(0, 0, 0, .20),
+    inset 0 1px 0 rgba(255, 255, 255, .045);
+  transition:
+    transform .4s cubic-bezier(.22, 1, .36, 1),
+    border-color .4s ease,
+    box-shadow .4s ease,
+    background .4s ease;
+}
+/* =========================================================
+   LINIE COLORATĂ SUS
+========================================================= */
+#gradinita-program-prelungit .info-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 28px;
+  right: 28px;
+  height: 2px;
+  border-radius:
+    0 0 999px 999px;
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(var(--card-accent), .95),
+      transparent
+    );
+  opacity: .85;
+  transition:
+    left .4s ease,
+    right .4s ease,
+    opacity .4s ease;
+}
+/* =========================================================
+   GLOW DECORATIV
+========================================================= */
+#gradinita-program-prelungit .info-card::after {
+  content: "";
+  position: absolute;
+  right: -70px;
+  bottom: -80px;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background:
+    radial-gradient(
+      circle,
+      rgba(var(--card-accent), .13),
+      transparent 68%
+    );
+  filter:
+    blur(4px);
+  pointer-events: none;
+  transition:
+    transform .5s ease,
+    opacity .5s ease;
+}
+/* =========================================================
+   ICON
+========================================================= */
+#gradinita-program-prelungit .info-card__icon {
+  position: relative;
+  z-index: 2;
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 28px;
+  border:
+    1px solid rgba(var(--card-accent), .28);
+  border-radius:
+    17px;
+  background:
+    rgba(var(--card-accent), .10);
+  color:
+    rgb(var(--card-accent));
+  box-shadow:
+    0 12px 30px rgba(var(--card-accent), .10);
+  transition:
+    transform .4s cubic-bezier(.22, 1, .36, 1),
+    background .4s ease,
+    box-shadow .4s ease;
+}
+#gradinita-program-prelungit .info-card__icon i {
+  font-size:
+    1.15rem;
+}
+/* MICĂ AURĂ ÎN SPATELE ICONULUI */
+#gradinita-program-prelungit
+.info-card__icon::before {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  z-index: -1;
+  border-radius:
+    22px;
+  background:
+    rgba(var(--card-accent), .05);
+  opacity: 0;
+  transform:
+    scale(.7);
+  transition:
+    opacity .4s ease,
+    transform .4s ease;
+}
+/* =========================================================
+   TITLU
+========================================================= */
+#gradinita-program-prelungit .info-card h4 {
+  position: relative;
+  z-index: 2;
+  margin:
+    0 0 17px;
+  padding-bottom:
+    14px;
+  font-family:
+    "DM Serif Display",
+    serif;
+  font-size:
+    clamp(1.55rem, 2vw, 2.1rem);
+  font-weight:
+    400;
+  line-height:
+    1.05;
+  letter-spacing:
+    -.02em;
+  color:
+    #fff;
+}
+/* LINIE SUB TITLU */
+#gradinita-program-prelungit .info-card h4::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 36px;
+  height: 2px;
+  border-radius:
+    999px;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(var(--card-accent), 1),
+      rgba(var(--card-accent), 0)
+    );
+  transition:
+    width .4s cubic-bezier(.22, 1, .36, 1);
+}
+/* =========================================================
+   TEXT
+========================================================= */
+#gradinita-program-prelungit .info-card p {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  color:
+    #94a3b8;
+  font-size:
+    .9rem;
+  line-height:
+    1.82;
+  transition:
+    color .35s ease;
+}
+/* =========================================================
+   CULORI DIFERITE
+========================================================= */
+/* PROGRAM */
+#gradinita-program-prelungit
+.info-card:nth-child(1) {
+  --card-accent:
+    56, 189, 248;
+}
+/* CLĂDIRE */
+#gradinita-program-prelungit
+.info-card:nth-child(2) {
+  --card-accent:
+    96, 165, 250;
+}
+/* JOC */
+#gradinita-program-prelungit
+.info-card:nth-child(3) {
+  --card-accent:
+    168, 85, 247;
+}
+/* MASĂ */
+#gradinita-program-prelungit
+.info-card:nth-child(4) {
+  --card-accent:
+    251, 146, 60;
+}
+/* FAMILIE */
+#gradinita-program-prelungit
+.info-card:nth-child(5) {
+  --card-accent:
+    244, 114, 182;
+}
+/* COMUNITATE */
+#gradinita-program-prelungit
+.info-card:nth-child(6) {
+  --card-accent:
+    52, 211, 153;
+}
+/* =========================================================
+   HOVER
+========================================================= */
+@media (hover:hover) and (pointer:fine) {
+  #gradinita-program-prelungit
+  .info-card:hover {
+    transform:
+      translateY(-8px);
+    border-color:
+      rgba(var(--card-accent), .30);
+    background:
+      radial-gradient(
+        circle at 0% 0%,
+        rgba(var(--card-accent), .16),
+        transparent 45%
+      ),
+      linear-gradient(
+        145deg,
+        rgba(255, 255, 255, .06),
+        rgba(255, 255, 255, .018)
+      );
+    box-shadow:
+      0 32px 75px rgba(0, 0, 0, .30),
+      0 0 30px rgba(var(--card-accent), .07),
+      inset 0 1px 0 rgba(255, 255, 255, .06);
+  }
+  #gradinita-program-prelungit
+  .info-card:hover::before {
+    left: 10px;
+    right: 10px;
+    opacity: 1;
+  }
+  #gradinita-program-prelungit
+  .info-card:hover::after {
+    transform:
+      scale(1.25);
+  }
+  #gradinita-program-prelungit
+  .info-card:hover
+  .info-card__icon {
+    transform:
+      translateY(-4px)
+      rotate(-4deg)
+      scale(1.07);
+    background:
+      rgba(var(--card-accent), .16);
+    box-shadow:
+      0 16px 36px rgba(var(--card-accent), .17);
+  }
+  #gradinita-program-prelungit
+  .info-card:hover
+  .info-card__icon::before {
+    opacity: 1;
+    transform:
+      scale(1);
+  }
+  #gradinita-program-prelungit
+  .info-card:hover h4::after {
+    width:
+      68px;
+  }
+  #gradinita-program-prelungit
+  .info-card:hover p {
+    color:
+      #cbd5e1;
+  }
+}
+/* =========================================================
+   GRĂDINIȚĂ — COMPONENTĂ COMPLETĂ
+========================================================= */
+#gradinita-program-prelungit {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  padding:
+    clamp(28px, 4vw, 55px);
+  border:
+    1px solid rgba(255, 255, 255, .07);
+  border-radius:
+    38px;
+  background:
+    radial-gradient(
+      circle at 90% 5%,
+      rgba(168, 85, 247, .07),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 5% 90%,
+      rgba(56, 189, 248, .06),
+      transparent 34%
+    ),
+    rgba(255, 255, 255, .012);
+  box-shadow:
+    0 35px 90px rgba(0, 0, 0, .20);
+}
+/* =========================================================
+   INTRO
+========================================================= */
+#gradinita-program-prelungit
+.education-feature__intro {
+  width:
+    100%;
+  gap:
+    clamp(45px, 6vw, 90px);
+}
+/* =========================================================
+   IMAGINE
+========================================================= */
+#gradinita-program-prelungit
+.section-block__media {
+  position:
+    relative;
+  min-height:
+    580px;
+  border-radius:
+    30px;
+}
+#gradinita-program-prelungit
+.section-block__media img {
+  min-height:
+    580px;
+  object-fit:
+    cover;
+}
+/* =========================================================
+   LABEL PESTE IMAGINE
+========================================================= */
+.education-feature__media-label {
+  position:
+    absolute;
+  left:
+    20px;
+  bottom:
+    20px;
+  z-index:
+    4;
+  display:
+    inline-flex;
+  align-items:
+    center;
+  gap:
+    9px;
+  padding:
+    10px 14px;
+  border:
+    1px solid rgba(255, 255, 255, .14);
+  border-radius:
+    999px;
+  background:
+    rgba(15, 23, 42, .82);
+  backdrop-filter:
+    blur(14px);
+  color:
+    white;
+  font-size:
+    .7rem;
+}
+.education-feature__media-label i {
+  color:
+    #c084fc;
+}
+/* =========================================================
+   FACILITĂȚI
+========================================================= */
+.education-feature__facilities {
+  position:
+    relative;
+  padding-top:
+    55px;
+  border-top:
+    1px solid rgba(255, 255, 255, .07);
+}
+/* =========================================================
+   HEADER FACILITĂȚI
+========================================================= */
+.education-feature__facilities-header {
+  max-width:
+    850px;
+  margin:
+    0 auto 48px;
+  text-align:
+    center;
+}
+.education-feature__eyebrow {
+  display:
+    inline-flex;
+  margin-bottom:
+    18px;
+  color:
+    #c084fc;
+  font-size:
+    .68rem;
+  font-weight:
+    600;
+  letter-spacing:
+    .15em;
+  text-transform:
+    uppercase;
+}
+.education-feature__facilities-header h4 {
+  margin:
+    0;
+  font-family:
+    "DM Serif Display",
+    serif;
+  font-size:
+    clamp(2.2rem, 4vw, 4rem);
+  font-weight:
+    400;
+  line-height:
+    1.02;
+  letter-spacing:
+    -.025em;
+}
+.education-feature__facilities-header h4 span {
+  display:
+    block;
+  margin-top:
+    8px;
+  color:
+    #c4b5fd;
+  font-style:
+    italic;
+  font-size:
+    .78em;
+}
+.education-feature__facilities-header p {
+  max-width:
+    680px;
+  margin:
+    22px auto 0;
+  color:
+    var(--muted);
+  font-size:
+    .9rem;
+  line-height:
+    1.8;
+}
+/* =========================================================
+   ȘCOALA GIMNAZIALĂ POIANA-SECIURI
+========================================================= */
+#scoala-poiana-seciuri {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 75px;
+  padding:
+    clamp(28px, 4vw, 55px);
+  border:
+    1px solid rgba(255, 255, 255, .07);
+  border-radius:
+    38px;
+  background:
+    radial-gradient(
+      circle at 8% 8%,
+      rgba(14, 165, 233, .075),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 95% 90%,
+      rgba(37, 99, 235, .06),
+      transparent 30%
+    ),
+    rgba(255, 255, 255, .012);
+  box-shadow:
+    0 35px 90px rgba(0, 0, 0, .20);
+}
+/* INTRO */
+#scoala-poiana-seciuri
+.education-feature__intro {
+  width: 100%;
+  gap:
+    clamp(45px, 6vw, 90px);
+}
+/* MEDIA */
+#scoala-poiana-seciuri
+.section-block__media {
+  position: relative;
+  min-height: 560px;
+  border-radius: 30px;
+}
+#scoala-poiana-seciuri
+.section-block__media img {
+  min-height: 560px;
+  object-fit: cover;
+}
+/* LABEL */
+#scoala-poiana-seciuri
+.education-feature__media-label i {
+  color: #38bdf8;
+}
+/* =========================================================
+   TIMELINE
+========================================================= */
+.education-feature__timeline {
+  position: relative;
+  padding-top: 58px;
+  border-top:
+    1px solid rgba(255, 255, 255, .07);
+}
+/* =========================================================
+   TIMELINE GRID
+========================================================= */
+#scoala-poiana-seciuri
+.info-grid--school-timeline {
+  position: relative;
+  display: grid;
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 50px;
+}
+/* LINIE DE FUNDAL */
+#scoala-poiana-seciuri
+.info-grid--school-timeline::before {
+  content: "";
+  position: absolute;
+  top: 34px;
+  left: 7%;
+  right: 7%;
+  height: 1px;
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(56, 189, 248, .35),
+      rgba(96, 165, 250, .35),
+      transparent
+    );
+  pointer-events: none;
+}
+/* =========================================================
+   CARD TIMELINE
+========================================================= */
+#scoala-poiana-seciuri
+.info-grid--school-timeline
+.info-card {
+  --school-card:
+    56, 189, 248;
+  position: relative;
+  min-height: 310px;
+  padding:
+    78px 26px 28px;
+  overflow: hidden;
+  border:
+    1px solid rgba(255, 255, 255, .08);
+  border-radius:
+    27px;
+  background:
+    radial-gradient(
+      circle at 0% 0%,
+      rgba(var(--school-card), .11),
+      transparent 43%
+    ),
+    rgba(255, 255, 255, .025);
+  box-shadow:
+    0 22px 55px rgba(0, 0, 0, .19);
+  transition:
+    transform .4s cubic-bezier(.22, 1, .36, 1),
+    border-color .4s ease,
+    box-shadow .4s ease;
+}
+/* ICON */
+#scoala-poiana-seciuri
+.info-grid--school-timeline
+.info-card__icon {
+  position: absolute;
+  top: 18px;
+  left: 25px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border:
+    1px solid rgba(var(--school-card), .30);
+  border-radius: 15px;
+  background:
+    rgba(var(--school-card), .11);
+  color:
+    rgb(var(--school-card));
+  box-shadow:
+    0 12px 28px rgba(var(--school-card), .10);
+}
+/* PUNCT PE TIMELINE */
+#scoala-poiana-seciuri
+.info-grid--school-timeline
+.info-card__icon::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -29px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background:
+    rgb(var(--school-card));
+  box-shadow:
+    0 0 13px rgba(var(--school-card), .65);
+  transform:
+    translateY(-50%);
+}
+/* TITLU / AN */
+#scoala-poiana-seciuri
+.info-grid--school-timeline
+.info-card h4 {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  margin:
+    0 0 18px;
+  padding-bottom: 11px;
+  font-family:
+    "DM Serif Display",
+    serif;
+  font-size:
+    clamp(1.7rem, 2.3vw, 2.5rem);
+  font-weight: 400;
+  line-height: 1;
+  color: white;
+}
+#scoala-poiana-seciuri
+.info-grid--school-timeline
+.info-card h4::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 38px;
+  height: 2px;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(var(--school-card), 1),
+      rgba(var(--school-card), 0)
+    );
+  transition:
+    width .4s ease;
+}
+/* AN DECORATIV */
+#scoala-poiana-seciuri
+.info-grid--school-timeline
+.info-card h4::before {
+  content:
+    attr(data-year);
+  position: absolute;
+  top: 44px;
+  right: -8px;
+  z-index: -1;
+  color:
+    rgba(var(--school-card), .055);
+  font-family:
+    "DM Serif Display",
+    serif;
+  font-size:
+    4.7rem;
+  white-space: nowrap;
+  pointer-events: none;
+}
+/* TEXT */
+#scoala-poiana-seciuri
+.info-grid--school-timeline
+.info-card p {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  color:
+    #94a3b8;
+  font-size:
+    .88rem;
+  line-height:
+    1.8;
+}
+/* =========================================================
+   CULORI
+========================================================= */
+#scoala-poiana-seciuri
+.info-card:nth-child(1) {
+  --school-card:
+    56, 189, 248;
+}
+#scoala-poiana-seciuri
+.info-card:nth-child(2) {
+  --school-card:
+    96, 165, 250;
+}
+#scoala-poiana-seciuri
+.info-card:nth-child(3) {
+  --school-card:
+    99, 102, 241;
+}
+#scoala-poiana-seciuri
+.info-card:nth-child(4) {
+  --school-card:
+    139, 92, 246;
+}
+#scoala-poiana-seciuri
+.info-card:nth-child(5) {
+  --school-card:
+    52, 211, 153;
+}
+#scoala-poiana-seciuri
+.info-card:nth-child(6) {
+  --school-card:
+    34, 197, 94;
+}
+/* =========================================================
+   HOVER
+========================================================= */
+@media (hover:hover) and (pointer:fine) {
+  #scoala-poiana-seciuri
+  .info-grid--school-timeline
+  .info-card:hover {
+    transform:
+      translateY(-7px);
+    border-color:
+      rgba(var(--school-card), .32);
+    box-shadow:
+      0 32px 72px rgba(0, 0, 0, .28),
+      0 0 26px rgba(var(--school-card), .07);
+  }
+  #scoala-poiana-seciuri
+  .info-grid--school-timeline
+  .info-card:hover h4::after {
+    width:
+      70px;
+  }
+}
+/* =========================================================
+   FOOTER — DESCOPERĂ BUSTUCHIN
+   ========================================================= */
+.footer {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding:
+    100px 0
+    32px;
+  border-top:
+    1px solid rgba(96, 165, 250, .16);
+  background:
+    radial-gradient(
+      circle at 12% 10%,
+      rgba(37, 99, 235, .16),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 88% 70%,
+      rgba(14, 165, 233, .08),
+      transparent 30%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(7, 13, 24, .96),
+      rgba(2, 6, 23, .99)
+    );
+}
+/* =========================================================
+   LUMINĂ SUPERIOARĂ
+   ========================================================= */
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: min(80%, 1100px);
+  height: 1px;
+  transform: translateX(-50%);
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(96, 165, 250, .75),
+      transparent
+    );
+  box-shadow:
+    0 0 35px rgba(37, 99, 235, .32);
+  pointer-events: none;
+}
+/* =========================================================
+   TEXTURĂ DE FUNDAL
+   ========================================================= */
+.footer-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: .45;
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, .018) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, .018) 1px,
+      transparent 1px
+    );
+  background-size:
+    48px 48px;
+  mask-image:
+    linear-gradient(
+      to bottom,
+      black,
+      transparent 85%
+    );
+  -webkit-mask-image:
+    linear-gradient(
+      to bottom,
+      black,
+      transparent 85%
+    );
+}
+/* =========================================================
+   CONTAINER PRINCIPAL
+   ========================================================= */
+.footer-container {
+  position: relative;
+  display: grid;
+  grid-template-columns:
+    minmax(280px, 1.6fr)
+    repeat(4, minmax(150px, 1fr));
+  gap:
+    55px 38px;
+  align-items: start;
+}
+/* =========================================================
+   COLOANE
+   ========================================================= */
+.footer__column {
+  min-width: 0;
+}
+/* =========================================================
+   BRAND
+   ========================================================= */
+.footer__brand {
+  padding-right: 20px;
+}
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 25px;
+}
+.footer-logo img {
+  width: 68px;
+  height: 68px;
+  flex: 0 0 auto;
+  object-fit: contain;
+  padding: 7px;
+  border:
+    1px solid rgba(96, 165, 250, .16);
+  border-radius:
+    20px;
+  background:
+    rgba(255, 255, 255, .035);
+  box-shadow:
+    0 14px 35px rgba(0, 0, 0, .25),
+    inset 0 1px 0 rgba(255, 255, 255, .05);
+}
+.footer-logo h3 {
+  margin: 0;
+  color:
+    #f8fafc;
+  font-family:
+    "DM Serif Display",
+    serif;
+  font-size:
+    1.35rem;
+  font-weight:
+    400;
+  line-height:
+    1.15;
+  letter-spacing:
+    .01em;
+}
+.footer-logo span {
+  display: block;
+  margin-top: 6px;
+  color:
+    #60a5fa;
+  font-size:
+    .72rem;
+  font-weight:
+    600;
+  letter-spacing:
+    .12em;
+  text-transform:
+    uppercase;
+}
+/* =========================================================
+   DESCRIERE
+   ========================================================= */
+.footer-description {
+  max-width: 440px;
+  margin:
+    0 0 14px;
+  color:
+    #94a3b8;
+  font-size:
+    .88rem;
+  line-height:
+    1.85;
+}
+/* =========================================================
+   TITLURI COLOANE
+   ========================================================= */
+.footer__column h4 {
+  position: relative;
+  margin:
+    6px 0 28px;
+  padding-bottom:
+    13px;
+  color:
+    #f8fafc;
+  font-size:
+    .82rem;
+  font-weight:
+    600;
+  letter-spacing:
+    .08em;
+  text-transform:
+    uppercase;
+}
+.footer__column h4::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 38px;
+  height: 2px;
+  border-radius:
+    999px;
+  background:
+    linear-gradient(
+      90deg,
+      #2563eb,
+      #60a5fa
+    );
+  box-shadow:
+    0 0 14px rgba(37, 99, 235, .4);
+}
+/* =========================================================
+   LINKURI
+   ========================================================= */
+.footer__column > a,
+.footer__column > p > a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+  max-width: 100%;
+  margin-bottom:
+    11px;
+  padding:
+    5px 0;
+  color:
+    #94a3b8;
+  font-size:
+    .82rem;
+  line-height:
+    1.45;
+  text-decoration:
+    none;
+  transition:
+    color .3s ease,
+    transform .3s ease;
+}
+/* ICON */
+.footer__column > a i,
+.footer__column > p > a i {
+  width: 26px;
+  height: 26px;
+  flex:
+    0 0 26px;
+  display:
+    inline-flex;
+  align-items:
+    center;
+  justify-content:
+    center;
+  border:
+    1px solid rgba(96, 165, 250, .11);
+  border-radius:
+    8px;
+  background:
+    rgba(37, 99, 235, .055);
+  color:
+    #60a5fa;
+  font-size:
+    .68rem;
+  transition:
+    background .3s ease,
+    border-color .3s ease,
+    transform .3s ease,
+    color .3s ease;
+}
+/* HOVER LINK */
+@media (hover:hover) and (pointer:fine) {
+  .footer__column > a:hover,
+  .footer__column > p > a:hover {
+    color:
+      #f8fafc;
+    transform:
+      translateX(4px);
+  }
+  .footer__column > a:hover i,
+  .footer__column > p > a:hover i {
+    color:
+      #bfdbfe;
+    border-color:
+      rgba(96, 165, 250, .32);
+    background:
+      rgba(37, 99, 235, .14);
+    transform:
+      scale(1.08);
+  }
+}
+/* =========================================================
+   TEXTE SIMPLE DIN COLOANE
+   ========================================================= */
+.footer__column > p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin:
+    0 0 10px;
+  color:
+    #94a3b8;
+  font-size:
+    .82rem;
+  line-height:
+    1.6;
+}
+.footer__column > p > i {
+  width: 26px;
+  height: 26px;
+  flex:
+    0 0 26px;
+  display:
+    inline-flex;
+  align-items:
+    center;
+  justify-content:
+    center;
+  border:
+    1px solid rgba(96, 165, 250, .11);
+  border-radius:
+    8px;
+  background:
+    rgba(37, 99, 235, .055);
+  color:
+    #60a5fa;
+  font-size:
+    .68rem;
+}
+/* =========================================================
+   SOCIAL MEDIA
+   ========================================================= */
+.footer-socials {
+  display:
+    flex;
+  align-items:
+    center;
+  gap:
+    10px;
+  margin-top:
+    26px;
+}
+.footer-socials a {
+  position:
+    relative;
+  width:
+    42px;
+  height:
+    42px;
+  margin:
+    0;
+  display:
+    inline-flex;
+  align-items:
+    center;
+  justify-content:
+    center;
+  overflow:
+    hidden;
+  border:
+    1px solid rgba(96, 165, 250, .18);
+  border-radius:
+    13px;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, .06),
+      rgba(255, 255, 255, .018)
+    );
+  color:
+    #cbd5e1;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, .04);
+  transition:
+    transform .3s ease,
+    border-color .3s ease,
+    background .3s ease,
+    color .3s ease,
+    box-shadow .3s ease;
+}
+.footer-socials a i {
+  width:
+    auto;
+  height:
+    auto;
+  flex:
+    initial;
+  padding:
+    0;
+  border:
+    none;
+  background:
+    none;
+  color:
+    inherit;
+  font-size:
+    .95rem;
+}
+@media (hover:hover) and (pointer:fine) {
+  .footer-socials a:hover {
+    color:
+      white;
+    border-color:
+      rgba(96, 165, 250, .45);
+    background:
+      rgba(37, 99, 235, .18);
+    transform:
+      translateY(-4px);
+    box-shadow:
+      0 12px 28px rgba(0, 0, 0, .25),
+      0 0 18px rgba(37, 99, 235, .12);
+  }
+}
+/* =========================================================
+   FOOTER BOTTOM
+   ========================================================= */
+.footer-bottom {
+  position:
+    relative;
+  width:
+    min(90%, 1500px);
+  margin:
+    75px auto 0;
+  padding:
+    28px 0 0;
+  display:
+    grid;
+  grid-template-columns:
+    1.2fr 1fr 1.2fr;
+  align-items:
+    center;
+  gap:
+    30px;
+  border-top:
+    1px solid rgba(255, 255, 255, .07);
+}
+.footer-bottom::before {
+  content:
+    "";
+  position:
+    absolute;
+  top:
+    -1px;
+  left:
+    0;
+  width:
+    120px;
+  height:
+    1px;
+  background:
+    linear-gradient(
+      90deg,
+      #2563eb,
+      transparent
+    );
+}
+.footer-bottom p {
+  margin:
+    0;
+  color:
+    #64748b;
+  font-size:
+    .72rem;
+  line-height:
+    1.7;
+}
+/* CITAT */
+.footer-bottom p:first-child {
+  color:
+    #94a3b8;
+  font-family:
+    "DM Serif Display",
+    serif;
+  font-size:
+    .88rem;
+  font-style:
+    italic;
+}
+/* COPYRIGHT */
+.footer-bottom p:nth-child(2) {
+  text-align:
+    center;
+}
+/* CREDIT */
+.footer-credit {
+  text-align:
+    right;
+}
+.footer-credit a {
+  color:
+    #93c5fd;
+  font-weight:
+    500;
+  text-decoration:
+    none;
+  transition:
+    color .3s ease;
+}
+.footer-credit a:hover {
+  color:
+    #ffffff;
+}
+/* =========================================================
+   FOCUS — ACCESIBILITATE
+   ========================================================= */
+.footer a:focus-visible {
+  outline:
+    2px solid #60a5fa;
+  outline-offset:
+    4px;
+  border-radius:
+    6px;
+}
+/* =========================================================
+   GOOGLE MAPS BUTTON
+========================================================= */
+.location-map-btn {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  gap: 13px;
+  margin-top: 22px;
+  padding: 11px 15px 11px 11px;
+  border: 1px solid rgba(255, 255, 255, .10);
+  border-radius: 15px;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(6, 182, 212, .12),
+      rgba(14, 116, 144, .06)
+    ),
+    rgba(255, 255, 255, .025);
+  color: white;
+  text-decoration: none;
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, .18);
+  transition:
+    transform .3s ease,
+    border-color .3s ease,
+    box-shadow .3s ease,
+    background .3s ease;
+}
+/* lumină subtilă la hover */
+.location-map-btn::before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: -60%;
+  width: 45%;
+  height: 300%;
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, .08),
+      transparent
+    );
+  transform: rotate(25deg);
+  transition:
+    left .55s ease;
+  z-index: -1;
+}
+.location-map-btn:hover::before {
+  left: 130%;
+}
+/* ICON */
+.location-map-btn__icon {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background:
+    linear-gradient(
+      135deg,
+      #06b6d4,
+      #0e7490
+    );
+  color: white;
+  box-shadow:
+    0 8px 20px rgba(6, 182, 212, .22);
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease;
+}
+.location-map-btn__icon i {
+  font-size: .9rem;
+}
+/* TEXT */
+.location-map-btn__content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.location-map-btn__label {
+  color:
+    rgba(255, 255, 255, .48);
+  font-size: .58rem;
+  font-weight: 600;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+.location-map-btn__text {
+  color: white;
+  font-size: .78rem;
+  font-weight: 650;
+}
+/* SĂGEATĂ */
+.location-map-btn__arrow {
+  margin-left: 8px;
+  color:
+    rgba(255, 255, 255, .45);
+  font-size: .72rem;
+  transition:
+    transform .3s ease,
+    color .3s ease;
+}
+/* HOVER */
+.location-map-btn:hover {
+  transform:
+    translateY(-3px);
+  border-color:
+    rgba(34, 211, 238, .30);
+  background:
+    linear-gradient(
+      135deg,
+      rgba(6, 182, 212, .18),
+      rgba(14, 116, 144, .08)
+    ),
+    rgba(255, 255, 255, .035);
+  box-shadow:
+    0 16px 38px rgba(0, 0, 0, .28);
+}
+.location-map-btn:hover
+.location-map-btn__icon {
+  transform:
+    scale(1.06);
+  box-shadow:
+    0 10px 26px rgba(6, 182, 212, .32);
+}
+.location-map-btn:hover
+.location-map-btn__arrow {
+  color:
+    #22d3ee;
+  transform:
+    translate(2px, -2px);
+}
+/* CLICK */
+.location-map-btn:active {
+  transform:
+    translateY(-1px)
+    scale(.98);
+}
+/* ACCESSIBILITY */
+.location-map-btn:focus-visible {
+  outline:
+    2px solid #22d3ee;
+  outline-offset:
+    4px;
+}
+/* =========================================================
+   MESAJUL PRIMARULUI
+========================================================= */
+.mayor-welcome {
+  position: relative;
+  overflow: hidden;
+  padding: 150px 0 170px;
+  background:
+    radial-gradient(
+      circle at 15% 40%,
+      rgba(37, 99, 235, 0.12),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 85% 65%,
+      rgba(255, 255, 255, 0.04),
+      transparent 30%
+    );
+}
+/* linie subtilă sus */
+.mayor-welcome::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: min(90%, 1400px);
+  height: 1px;
+  transform: translateX(-50%);
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.14),
+      transparent
+    );
+}
+/* =========================================================
+   AMBIENT GLOW
+========================================================= */
+.mayor-welcome__glow {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  filter: blur(120px);
+  pointer-events: none;
+}
+.mayor-welcome__glow--one {
+  top: 5%;
+  left: -250px;
+  background:
+    rgba(37, 99, 235, 0.13);
+}
+.mayor-welcome__glow--two {
+  right: -300px;
+  bottom: 0;
+  background:
+    rgba(255, 255, 255, 0.06);
+}
+/* =========================================================
+   LAYOUT
+========================================================= */
+.mayor-welcome__layout {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns:
+    minmax(320px, 0.78fr)
+    minmax(450px, 1.22fr);
+  gap: clamp(60px, 8vw, 130px);
+  align-items: center;
+  max-width: 1350px;
+  margin-inline: auto;
+}
+/* =========================================================
+   PORTRET
+========================================================= */
+.mayor-welcome__portrait {
+  position: relative;
+}
+.mayor-welcome__portrait-frame {
+  position: relative;
+  overflow: hidden;
+  min-height: 650px;
+  border-radius:
+    4px
+    80px
+    4px
+    80px;
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.12);
+  background:
+    rgba(255, 255, 255, 0.03);
+  box-shadow:
+    0 50px 120px
+    rgba(0, 0, 0, 0.45);
+}
+.mayor-welcome__portrait-frame::before {
+  content: "";
+  position: absolute;
+  inset: 18px;
+  z-index: 2;
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.1);
+  border-radius:
+    2px
+    65px
+    2px
+    65px;
+  pointer-events: none;
+}
+.mayor-welcome__portrait img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition:
+    transform 1.4s
+    cubic-bezier(.22, 1, .36, 1);
+}
+.mayor-welcome__portrait:hover img {
+  transform:
+    scale(1.035);
+}
+/* overlay fotografie */
+.mayor-welcome__portrait-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      to top,
+      rgba(2, 6, 23, 0.97) 0%,
+      rgba(2, 6, 23, 0.5) 30%,
+      transparent 65%
+    );
+}
+/* informații peste fotografie */
+.mayor-welcome__portrait-info {
+  position: absolute;
+  left: 45px;
+  right: 45px;
+  bottom: 45px;
+  z-index: 3;
+}
+.mayor-welcome__role {
+  display: block;
+  margin-bottom: 8px;
+  color:
+    rgba(255, 255, 255, 0.62);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.mayor-welcome__portrait-info h3 {
+  margin: 0;
+  font-family:
+    "DM Serif Display",
+    serif;
+  font-size:
+    clamp(2rem, 4vw, 3.4rem);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+/* text lateral */
+.mayor-welcome__vertical-text {
+  position: absolute;
+  top: 50%;
+  left: -50px;
+  transform:
+    translateY(-50%)
+    rotate(-90deg);
+  color:
+    rgba(255, 255, 255, 0.22);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.4em;
+}
+/* =========================================================
+   CONTENT
+========================================================= */
+.mayor-welcome__content {
+  position: relative;
+  max-width: 720px;
+}
+/* =========================================================
+   EYEBROW
+========================================================= */
+.mayor-welcome__eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 25px;
+  color: #60a5fa;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+.mayor-welcome__eyebrow span {
+  display: block;
+  width: 45px;
+  height: 1px;
+  background:
+    linear-gradient(
+      90deg,
+      #2563eb,
+      #60a5fa
+    );
+}
+/* =========================================================
+   TITLE
+========================================================= */
+.mayor-welcome__title {
+  margin: 0 0 55px;
+  font-family:
+    "DM Serif Display",
+    serif;
+  font-size:
+    clamp(3.3rem, 6vw, 4.5rem);
+  font-weight: 400;
+  line-height: 0.93;
+  letter-spacing: -0.045em;
+  color: #fff;
+}
+.mayor-welcome__title em {
+  display: block;
+  margin-top: 12px;
+  color:
+    rgba(255, 255, 255, 0.38);
+  font-weight: 400;
+}
+/* =========================================================
+   QUOTE
+========================================================= */
+.mayor-welcome__quote {
+  position: relative;
+  padding-left: 42px;
+}
+.mayor-welcome__quote::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 0;
+  bottom: 5px;
+  width: 1px;
+  background:
+    linear-gradient(
+      to bottom,
+      #3b82f6,
+      rgba(59, 130, 246, 0.1)
+    );
+}
+/* ghilimea mare */
+.mayor-welcome__quote-mark {
+  position: absolute;
+  top: -72px;
+  left: 18px;
+  font-family:
+    "DM Serif Display",
+    serif;
+  font-size: 8rem;
+  line-height: 1;
+  color:
+    rgba(59, 130, 246, 0.12);
+  pointer-events: none;
+}
+/* =========================================================
+   TEXT
+========================================================= */
+.mayor-welcome__message {
+  position: relative;
+}
+.mayor-welcome__message p {
+  margin-bottom: 22px;
+  color:
+    rgba(226, 232, 240, 0.84);
+  font-size:
+    clamp(0.98rem, 1.25vw, 1.08rem);
+  line-height: 1.95;
+  font-weight: 300;
+}
+.mayor-welcome__message p:first-child {
+  color: #fff;
+  font-family:
+    "DM Serif Display",
+    serif;
+  font-size:
+    clamp(1.35rem, 2vw, 1.7rem);
+  line-height: 1.5;
+}
+/* =========================================================
+   TYPEWRITER CURSOR
+========================================================= */
+.mayor-welcome__message p.is-writing::after {
+  content: "";
+  display: inline-block;
+  width: 2px;
+  height: 1.15em;
+  margin-left: 5px;
+  vertical-align: -2px;
+  background: #60a5fa;
+  animation:
+    mayorCursorBlink
+    0.75s
+    steps(1)
+    infinite;
+}
+@keyframes mayorCursorBlink {
+  0%,
+  45% {
+    opacity: 1;
+  }
+  46%,
+  100% {
+    opacity: 0;
+  }
+}
+/* =========================================================
+   SIGNATURE
+========================================================= */
+.mayor-welcome__signature {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin-top: 50px;
+  padding-left: 42px;
+}
+.mayor-welcome__signature-line {
+  width: 55px;
+  height: 1px;
+  background:
+    rgba(255, 255, 255, 0.25);
+}
+.mayor-welcome__signature-name {
+  display: block;
+  margin-bottom: 6px;
+  font-family:
+    "Playwrite DE LA Guides",
+    cursive;
+  font-size:
+    clamp(1.5rem, 2vw, 2rem);
+  color: #fff;
+}
+.mayor-welcome__signature small {
+  color:
+    rgba(148, 163, 184, 0.8);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+/* =========================================================
+   CONTINUE
+========================================================= */
+.mayor-welcome__continue {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 55px;
+  margin-left: 42px;
+  color:
+    rgba(255, 255, 255, 0.52);
+  font-size: 0.76rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition:
+    color 0.35s ease;
+}
+.mayor-welcome__continue i {
+  transition:
+    transform 0.35s ease;
+}
+.mayor-welcome__continue:hover {
+  color: #fff;
+}
+.mayor-welcome__continue:hover i {
+  transform:
+    translateY(5px);
+}
+/* =========================================================
+   REVISTA TRADIȚII BUSTUCHINENE
+========================================================= */
+.magazine-library {
+  width: 100%;
+  margin-top: 70px;
+}
+.magazine-library__header {
+  max-width: 850px;
+  margin-bottom: 35px;
+}
+/* EDIȚII */
+.magazine-editions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 12px;
+  margin: 30px 0 40px;
+}
+.magazine-edition {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 90px;
+  padding: 14px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.04);
+  color: inherit;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+.magazine-edition span {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+.magazine-edition small {
+  margin-top: 5px;
+  opacity: 0.65;
+}
+.magazine-edition:hover,
+.magazine-edition.active {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(255, 255, 255, 0.22);
+}
+/* READER */
+.magazine-reader {
+  width: 100%;
+}
+.magazine-reader__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 18px;
+}
+.magazine-reader__label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  opacity: 0.6;
+}
+.magazine-reader__top h4 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+.magazine-reader__open {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+/* PDF */
+.magazine-viewer {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+}
+.magazine-viewer iframe {
+  display: block;
+  width: 100%;
+  height: 900px;
+  border: 0;
+}
+/* =========================================================
+   BUSTUCHINUL DE ALTĂDATĂ
+========================================================= */
+.section--memories {
+    --memory-bg: #f4eee3;
+    --memory-paper: #fffaf2;
+    --memory-dark: #252019;
+    --memory-muted: #72685b;
+    --memory-gold: #a97832;
+    --memory-border: rgba(88, 67, 39, 0.16);
+    position: relative;
+    overflow: hidden;
+}
+/* =========================================================
+   HERO
+========================================================= */
+.section--memories .memory-hero {
+    margin-top: 2.5rem;
+}
+.section--memories .memory-hero__media {
+    position: relative;
+    min-height: 560px;
+    border-radius: 28px;
+    overflow: hidden;
+    background: #222;
+}
+.section--memories .memory-hero__media img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.section--memories .memory-hero__overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(20, 17, 13, 0.88) 0%,
+            rgba(20, 17, 13, 0.55) 45%,
+            rgba(20, 17, 13, 0.1) 100%
+        );
+}
+.section--memories .memory-hero__content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+    min-height: 560px;
+    padding: clamp(2rem, 6vw, 5rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+}
+.section--memories .memory-label {
+    width: fit-content;
+    margin-bottom: 1.25rem;
+    padding: 0.55rem 0.9rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 999px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    backdrop-filter: blur(8px);
+}
+.section--memories .memory-hero__content h3 {
+    margin: 0;
+    font-size: clamp(2.2rem, 5vw, 4.6rem);
+    line-height: 1.03;
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 500;
+}
+.section--memories .memory-hero__content p {
+    max-width: 620px;
+    margin-top: 1.5rem;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.84);
+}
+/* =========================================================
+   GENERAL MEMORY BLOCK
+========================================================= */
+.section--memories .memory-block {
+    margin-top: 6rem;
+}
+.section--memories .memory-block--soft {
+    padding: clamp(2rem, 5vw, 4rem);
+    border-radius: 30px;
+    background: var(--memory-bg);
+}
+.section--memories .memory-block__header {
+    max-width: 760px;
+    margin-bottom: 2.5rem;
+}
+/* =========================================================
+   ATUNCI / ACUM
+========================================================= */
+.section--memories .memory-compare {
+    overflow: hidden;
+    border: 1px solid var(--memory-border);
+    border-radius: 28px;
+    background: var(--memory-paper);
+}
+.section--memories .memory-compare__item {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.section--memories .memory-compare__image {
+    position: relative;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+}
+.section--memories .memory-compare__image:first-child {
+    border-right: 1px solid rgba(255,255,255,0.35);
+}
+.section--memories .memory-compare__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s ease;
+}
+.section--memories .memory-compare:hover img {
+    transform: scale(1.025);
+}
+.section--memories .memory-year {
+    position: absolute;
+    left: 1rem;
+    bottom: 1rem;
+    padding: 0.5rem 0.8rem;
+    border-radius: 999px;
+    background: rgba(20,20,20,0.72);
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+}
+.section--memories .memory-compare__caption {
+    padding: 1.6rem 1.8rem 1.8rem;
+}
+.section--memories .memory-compare__caption > span {
+    color: var(--memory-gold);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+}
+.section--memories .memory-compare__caption h4 {
+    margin: 0.45rem 0 0.5rem;
+    font-size: 1.4rem;
+    color: var(--memory-dark);
+}
+.section--memories .memory-compare__caption p {
+    margin: 0;
+    color: var(--memory-muted);
+    line-height: 1.7;
+}
+/* =========================================================
+   MEMORY CARDS
+========================================================= */
+.section--memories .memory-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+.section--memories .memory-card {
+    border-radius: 22px;
+    overflow: hidden;
+    background: var(--memory-paper);
+    border: 1px solid var(--memory-border);
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+.section--memories .memory-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px rgba(74, 54, 31, 0.12);
+}
+.section--memories .memory-card__media {
+    position: relative;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+}
+.section--memories .memory-card__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.65s ease;
+}
+.section--memories .memory-card:hover img {
+    transform: scale(1.05);
+}
+.section--memories .memory-card__number {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: rgba(255, 250, 242, 0.92);
+    color: var(--memory-dark);
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+.section--memories .memory-card__content {
+    padding: 1.5rem;
+}
+.section--memories .memory-card__eyebrow {
+    color: var(--memory-gold);
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.11em;
+}
+.section--memories .memory-card__content h4 {
+    margin: 0.45rem 0 0.7rem;
+    font-size: 1.3rem;
+    color: var(--memory-dark);
+}
+.section--memories .memory-card__content p {
+    margin: 0;
+    color: var(--memory-muted);
+    line-height: 1.7;
+}
+/* =========================================================
+   PORTRETE
+========================================================= */
+.section--memories .memory-portraits {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr 1fr;
+    gap: 1.25rem;
+}
+.section--memories .memory-portrait {
+    position: relative;
+    min-height: 430px;
+    margin: 0;
+    border-radius: 24px;
+    overflow: hidden;
+}
+.section--memories .memory-portrait img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s ease;
+}
+.section--memories .memory-portrait:hover img {
+    transform: scale(1.04);
+}
+.section--memories .memory-portrait::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            to top,
+            rgba(16, 13, 10, 0.9),
+            transparent 60%
+        );
+}
+.section--memories .memory-portrait figcaption {
+    position: absolute;
+    z-index: 2;
+    left: 1.5rem;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+.section--memories .memory-portrait figcaption strong {
+    font-size: 1.15rem;
+}
+.section--memories .memory-portrait figcaption span {
+    margin-top: 0.3rem;
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.7);
+}
+/* =========================================================
+   INDUSTRIE
+========================================================= */
+.section--memories .memory-industry {
+    margin-top: 6rem;
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    overflow: hidden;
+    border-radius: 30px;
+    background: #201d19;
+    color: #fff;
+}
+.section--memories .memory-industry__media {
+    min-height: 550px;
+}
+.section--memories .memory-industry__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: saturate(0.8) contrast(1.05);
+}
+.section--memories .memory-industry__content {
+    padding: clamp(2rem, 5vw, 4.5rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.section--memories .memory-industry .section-block__title {
+    color: #fff;
+}
+.section--memories .memory-industry .section-block__text {
+    color: rgba(255,255,255,0.72);
+}
+.section--memories .memory-industry__facts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 2rem;
+}
+.section--memories .memory-industry__facts div {
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255,255,255,0.16);
+}
+.section--memories .memory-industry__facts span {
+    display: block;
+    margin-bottom: 0.35rem;
+    color: #d1ab70;
+    font-size: 0.75rem;
+}
+.section--memories .memory-industry__facts strong {
+    font-size: 0.95rem;
+}
+/* =========================================================
+   OBIECTE CU POVESTE
+========================================================= */
+.section--memories .memory-objects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+.section--memories .memory-object {
+    overflow: hidden;
+    border-radius: 22px;
+    background: #fff;
+    border: 1px solid var(--memory-border);
+}
+.section--memories .memory-object__media {
+    aspect-ratio: 1 / 1;
+    background: #e9e1d4;
+}
+.section--memories .memory-object__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.section--memories .memory-object__content {
+    padding: 1.4rem;
+}
+.section--memories .memory-object__content > span {
+    color: var(--memory-gold);
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+.section--memories .memory-object__content h4 {
+    margin: 0.4rem 0 0.6rem;
+    color: var(--memory-dark);
+    font-size: 1.25rem;
+}
+.section--memories .memory-object__content p {
+    margin: 0;
+    color: var(--memory-muted);
+    line-height: 1.65;
+}
+/* =========================================================
+   ARHIVA
+========================================================= */
+.section--memories .memory-archive {
+    margin-top: 6rem;
+    padding: clamp(2rem, 5vw, 4rem);
+    border-radius: 30px;
+    background: var(--memory-dark);
+}
+.section--memories .memory-archive .section-block__title {
+    color: #fff;
+}
+.section--memories .memory-archive__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+}
+.section--memories .memory-archive__card {
+    display: block;
+    padding: 2rem;
+    border-radius: 20px;
+    color: #fff;
+    text-decoration: none;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+.section--memories .memory-archive__card:hover {
+    transform: translateY(-5px);
+    background: rgba(255,255,255,0.1);
+}
+.section--memories .memory-archive__card > i {
+    margin-bottom: 2.5rem;
+    font-size: 1.5rem;
+    color: #d3ad70;
+}
+.section--memories .memory-archive__card > span {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #d3ad70;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+}
+.section--memories .memory-archive__card h4 {
+    margin: 0;
+    font-size: 1.35rem;
+}
+.section--memories .memory-archive__card p {
+    margin: 0.8rem 0 1.8rem;
+    color: rgba(255,255,255,0.65);
+    line-height: 1.65;
+}
+.section--memories .memory-archive__card strong {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+}
+/* =========================================================
+   CONTRIBUȚII
+========================================================= */
+.section--memories .memory-contribute {
+    margin-top: 3rem;
+    padding: clamp(2rem, 5vw, 4rem);
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 2rem;
+    align-items: center;
+    border-radius: 28px;
+    background: var(--memory-bg);
+    border: 1px solid var(--memory-border);
+}
+.section--memories .memory-contribute__icon {
+    width: 90px;
+    height: 90px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--memory-dark);
+    color: #fff;
+    font-size: 2rem;
+}
+.section--memories .memory-contribute__content > span {
+    color: var(--memory-gold);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+}
+.section--memories .memory-contribute__content h3 {
+    margin: 0.45rem 0 0.75rem;
+    color: var(--memory-dark);
+    font-size: clamp(1.6rem, 3vw, 2.5rem);
+}
+.section--memories .memory-contribute__content p {
+    max-width: 800px;
+    margin: 0 0 1.5rem;
+    color: var(--memory-muted);
+    line-height: 1.75;
+}
+.section--memories .memory-contribute__button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.85rem 1.15rem;
+    border-radius: 999px;
+    text-decoration: none;
+    background: var(--memory-dark);
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+/* =========================================================
+   CLIMĂ — CAPITOL EDITORIAL
+========================================================= */
+#clima.climate-chapter {
+    position: relative;
+    margin: clamp(2.5rem, 6vw, 5rem) 0;
+    padding: clamp(1.25rem, 3vw, 2.25rem) 0;
+    isolation: isolate;
+}
+#clima.climate-chapter::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border: 1px solid rgba(211, 173, 112, 0.22);
+    border-radius: 32px;
+    background:
+        radial-gradient(circle at 8% 8%, rgba(97, 153, 157, 0.16), transparent 28%),
+        linear-gradient(145deg, rgba(21, 39, 59, 0.96), rgba(12, 27, 43, 0.94));
+    box-shadow: 0 24px 60px rgba(3, 13, 24, 0.24);
+}
+#clima .climate-chapter__inner {
+    width: min(100% - 2rem, 1240px);
+}
+#clima .climate-chapter__header {
+    max-width: 980px;
+    margin: 0 auto clamp(2rem, 4vw, 3rem);
+    text-align: center;
+}
+#clima .section-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    padding: 0.55rem 0.9rem;
+    border: 1px solid rgba(211, 173, 112, 0.34);
+    border-radius: 999px;
+    color: #e5c487;
+    background: rgba(211, 173, 112, 0.08);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+}
+#clima .section-title {
+    max-width: 850px;
+    margin: 1rem auto 0.65rem;
+    color: #f5f0e6;
+    font-family: "DM Serif Display", "Georgia", serif;
+    font-size: clamp(2.1rem, 4.4vw, 4rem);
+    line-height: 1.02;
+    text-wrap: balance;
+}
+#clima .section-divider {
+    width: 72px;
+    height: 2px;
+    margin: 1.15rem auto;
+    background: linear-gradient(90deg, transparent, #d3ad70, transparent);
+}
+#clima .section-description {
+    max-width: 800px;
+    margin-inline: auto;
+    color: rgba(239, 243, 244, 0.72);
+    line-height: 1.8;
+}
+#clima .climate-chapter__highlights {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.65rem;
+    margin-top: 1.75rem;
+}
+#clima .climate-chapter__highlights > span {
+    min-height: 92px;
+    padding: 0.85rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-content: center;
+    column-gap: 0.65rem;
+    text-align: left;
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.045);
+}
+#clima .climate-chapter__highlights i {
+    grid-row: 1 / 3;
+    align-self: center;
+    color: #d3ad70;
+    font-size: 1rem;
+}
+#clima .climate-chapter__highlights strong {
+    color: #f5f0e6;
+    font-family: "DM Serif Display", "Georgia", serif;
+    font-size: 1rem;
+}
+#clima .climate-chapter__highlights small {
+    color: rgba(239, 243, 244, 0.55);
+    font-size: 0.68rem;
+}
+#clima .climate-chapter__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.55fr) minmax(300px, 0.75fr);
+    gap: clamp(1.5rem, 3vw, 2.75rem);
+    align-items: start;
+}
+#clima .climate-chapter__content {
+    display: grid;
+    gap: 1rem;
+    counter-reset: climate-topic;
+}
+#clima .climate-chapter__content > .section-block {
+    counter-increment: climate-topic;
+    position: relative;
+    padding: clamp(1.25rem, 2.5vw, 2rem);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.035);
+}
+#clima .climate-chapter__content > .section-block::before {
+    content: "0" counter(climate-topic);
+    display: block;
+    margin-bottom: 0.7rem;
+    color: #d3ad70;
+    font: 700 0.7rem/1 "Poppins", sans-serif;
+    letter-spacing: 0.14em;
+}
+#clima .section-block__title {
+    margin-top: 0;
+    color: #f5f0e6;
+    font-size: clamp(1.4rem, 2.1vw, 2rem);
+}
+#clima .section-block__text {
+    color: rgba(231, 237, 239, 0.7);
+}
+#clima .climate-chapter__media {
+    position: sticky;
+    top: 105px;
+    display: grid;
+    gap: 1rem;
+}
+#clima .climate-chapter__media .media-frame {
+    overflow: hidden;
+    aspect-ratio: 4 / 5;
+    border: 1px solid rgba(211, 173, 112, 0.25);
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.04);
+}
+#clima .climate-chapter__media .media-frame__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#clima .climate-chapter__media .stats {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.6rem;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+}
+#clima .climate-chapter__media .stats__item {
+    min-width: 0;
+    padding: 1rem 0.65rem;
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.045);
+    text-align: center;
+}
+#clima .climate-chapter__media .stats__number {
+    color: #e5c487;
+}
+/* =========================================================
+   POPULAȚIE ȘI ADMINISTRAȚIE — REGISTRU DOCUMENTAR
+========================================================= */
+.population-admin-chapter,
+.demography-register {
+    width: min(100%, 1180px);
+    margin: clamp(2.5rem, 6vw, 5rem) auto;
+    padding: clamp(1.4rem, 3.5vw, 3rem);
+    overflow: hidden;
+    border: 1px solid rgba(211, 173, 112, 0.22);
+    border-radius: 28px;
+    background:
+        radial-gradient(circle at 92% 8%, rgba(211, 173, 112, 0.11), transparent 28%),
+        linear-gradient(145deg, rgba(24, 43, 64, 0.96), rgba(12, 27, 43, 0.96));
+    box-shadow: 0 24px 60px rgba(2, 10, 20, 0.22);
+}
+.population-admin-chapter__heading {
+    max-width: 850px;
+    margin: 0 auto 2rem;
+    text-align: center;
+}
+.population-admin-chapter__heading > span,
+.demography-register__header > span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    color: #d9b875;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+}
+.population-admin-chapter__heading h3,
+.demography-register__header h3 {
+    margin: 0.65rem 0 0.85rem;
+    color: #f6f1e7;
+    font-family: "DM Serif Display", Georgia, serif;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    line-height: 1.05;
+    text-wrap: balance;
+}
+.population-admin-chapter__heading p,
+.demography-register__header p {
+    color: rgba(235, 240, 242, 0.7);
+    line-height: 1.75;
+}
+.population-admin-chapter__facts {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.7rem;
+}
+.population-admin-chapter__facts article {
+    padding: 1.15rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 17px;
+    background: rgba(255, 255, 255, 0.04);
+}
+.population-admin-chapter__facts span {
+    display: block;
+    color: rgba(235, 240, 242, 0.5);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+.population-admin-chapter__facts strong {
+    display: block;
+    margin: 0.25rem 0 0.45rem;
+    color: #e6c785;
+    font-family: "DM Serif Display", Georgia, serif;
+    font-size: 1.9rem;
+}
+.population-admin-chapter__facts p {
+    margin: 0;
+    color: rgba(235, 240, 242, 0.66);
+    font-size: 0.83rem;
+    line-height: 1.6;
+}
+.admin-era-list {
+    display: grid;
+    gap: 0.65rem;
+    align-self: center;
+}
+.admin-era-list > div {
+    position: relative;
+    padding: 1rem 1rem 1rem 1.25rem;
+    border: 1px solid rgba(211, 173, 112, 0.16);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.035);
+}
+.admin-era-list > div::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 3px;
+    border-radius: 3px;
+    background: #cba35f;
+}
+.admin-era-list strong,
+.admin-era-list span {
+    display: block;
+}
+.admin-era-list strong {
+    color: #f5efe4;
+    font-size: 0.9rem;
+}
+.admin-era-list span {
+    margin-top: 0.3rem;
+    color: rgba(235, 240, 242, 0.58);
+    font-size: 0.78rem;
+    line-height: 1.5;
+}
+.demography-register__header {
+    max-width: 880px;
+    margin-bottom: 1.5rem;
+}
+.demography-register__scroll {
+    overflow-x: auto;
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 18px;
+    scrollbar-color: #cba35f rgba(255, 255, 255, 0.05);
+}
+.demography-register table {
+    width: 100%;
+    min-width: 760px;
+    border-collapse: collapse;
+    color: rgba(241, 244, 245, 0.78);
+    font-size: 0.85rem;
+    font-variant-numeric: tabular-nums;
+}
+.demography-register th,
+.demography-register td {
+    padding: 0.85rem 0.8rem;
+    border-right: 1px solid rgba(255, 255, 255, 0.06);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    text-align: center;
+    white-space: nowrap;
+}
+.demography-register th:first-child {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    min-width: 150px;
+    color: #f5efe4;
+    background: #14283c;
+    text-align: left;
+}
+.demography-register thead th {
+    color: #e6c785;
+    background: rgba(203, 163, 95, 0.1);
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+.demography-register tbody tr:nth-child(even) td {
+    background: rgba(255, 255, 255, 0.025);
+}
+.demography-register tfoot th,
+.demography-register tfoot td {
+    color: #f4d697;
+    background: rgba(203, 163, 95, 0.12);
+    font-weight: 700;
+}
+.demography-register__notes {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.55rem 1.25rem;
+    margin-top: 1.2rem;
+}
+.demography-register__notes p {
+    margin: 0;
+    color: rgba(235, 240, 242, 0.6);
+    font-size: 0.76rem;
+    line-height: 1.55;
+}
+.demography-register__notes strong {
+    color: #dfbf7d;
+}
+/* =========================================================
+   PATRIMONIU RELIGIOS
+========================================================= */
+.section--religion {
+    position: relative;
+    isolation: isolate;
+    background:
+        radial-gradient(circle at 12% 12%, rgba(184, 143, 75, 0.12), transparent 28rem),
+        radial-gradient(circle at 88% 58%, rgba(62, 101, 105, 0.1), transparent 32rem),
+        #081727;
+}
+.section--religion::before {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-image: linear-gradient(rgba(218, 190, 135, 0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(218, 190, 135, 0.025) 1px, transparent 1px);
+    background-size: 64px 64px;
+    content: "";
+    mask-image: linear-gradient(to bottom, #000, transparent 70%);
+}
+.religion-shell {
+    display: grid;
+    gap: clamp(3.5rem, 7vw, 7.5rem);
+}
+.religion-hero {
+    position: relative;
+    overflow: hidden;
+    padding: clamp(2rem, 6vw, 5rem);
+    border: 1px solid rgba(219, 188, 126, 0.25);
+    border-radius: 2rem;
+    background: linear-gradient(135deg, rgba(24, 45, 64, 0.96), rgba(10, 25, 41, 0.96));
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.24);
+}
+.religion-hero::after {
+    position: absolute;
+    top: -6rem;
+    right: -2rem;
+    width: 22rem;
+    height: 30rem;
+    border: 1px solid rgba(219, 188, 126, 0.12);
+    border-radius: 50% 50% 0 0;
+    content: "";
+    transform: rotate(16deg);
+}
+.religion-hero__eyebrow,
+.religion-section-heading > span,
+.religion-music > div > span {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    color: #dfbd7d;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+.religion-hero h2 {
+    max-width: 850px;
+    margin: 1rem 0;
+    color: #f7f1e6;
+    font-family: var(--font-display);
+    font-size: clamp(2.6rem, 6vw, 5.8rem);
+    font-weight: 500;
+    line-height: 0.98;
+}
+.religion-hero > p {
+    max-width: 780px;
+    color: #c6d0d8;
+    font-size: clamp(1rem, 1.5vw, 1.18rem);
+    line-height: 1.8;
+}
+.religion-hero__facts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    margin-top: 2.5rem;
+    overflow: hidden;
+    border: 1px solid rgba(219, 188, 126, 0.16);
+    border-radius: 1.2rem;
+    background: rgba(219, 188, 126, 0.12);
+}
+.religion-hero__facts div {
+    display: grid;
+    gap: 0.35rem;
+    padding: 1.35rem;
+    background: rgba(8, 23, 39, 0.88);
+}
+.religion-hero__facts strong {
+    color: #e5c482;
+    font-family: var(--font-display);
+    font-size: 2rem;
+}
+.religion-hero__facts span { color: #aebbc6; font-size: 0.78rem; line-height: 1.5; }
+.religion-chapter-nav {
+    position: sticky;
+    top: calc(var(--nav-height, 88px) + 1rem);
+    z-index: 12;
+    display: flex;
+    justify-content: center;
+    gap: 0.4rem;
+    width: fit-content;
+    max-width: 100%;
+    margin: -5rem auto -3rem;
+    padding: 0.45rem;
+    border: 1px solid rgba(218, 190, 135, 0.2);
+    border-radius: 999px;
+    background: rgba(8, 23, 39, 0.9);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.28);
+    backdrop-filter: blur(16px);
+}
+.religion-chapter-nav a {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.7rem 1rem;
+    border-radius: 999px;
+    color: #cbd4db;
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 180ms ease;
+}
+.religion-chapter-nav a:hover { color: #101d29; background: #d9b870; }
+.religion-section-heading { max-width: 800px; margin-bottom: 2.5rem; }
+.religion-section-heading h3,
+.religion-music h3 {
+    margin: 0.65rem 0 0.8rem;
+    color: #f4eee4;
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 3.6rem);
+    font-weight: 500;
+    line-height: 1.05;
+}
+.religion-section-heading p,
+.religion-music p { color: #b7c3cc; line-height: 1.8; }
+.religion-history {
+    display: grid;
+    grid-template-columns: minmax(260px, 0.72fr) minmax(0, 1.28fr);
+    gap: clamp(2rem, 6vw, 6rem);
+}
+.religion-history .religion-section-heading { position: sticky; top: 10rem; align-self: start; }
+.religion-timeline { position: relative; display: grid; gap: 0.8rem; }
+.religion-timeline::before { position: absolute; top: 1.5rem; bottom: 1.5rem; left: 4.5rem; width: 1px; background: linear-gradient(#dfbd7d, rgba(223, 189, 125, 0.1)); content: ""; }
+.religion-timeline article { position: relative; display: grid; grid-template-columns: 4rem 1fr; gap: 1.6rem; padding: 1.35rem 0; }
+.religion-timeline article::before { position: absolute; top: 1.75rem; left: 4.23rem; width: 0.55rem; height: 0.55rem; border: 2px solid #dfbd7d; border-radius: 50%; background: #081727; content: ""; }
+.religion-timeline time { color: #dfbd7d; font-size: 0.74rem; font-weight: 800; text-align: right; }
+.religion-timeline h4 { margin: 0 0 0.45rem; color: #f1ece3; font-family: var(--font-display); font-size: 1.35rem; }
+.religion-timeline p { margin: 0; color: #aebbc5; font-size: 0.92rem; line-height: 1.72; }
+.religion-atlas { display: grid; gap: 1rem; }
+.religion-place {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(340px, 0.95fr);
+    min-height: 430px;
+    overflow: hidden;
+    border: 1px solid rgba(174, 198, 209, 0.13);
+    border-radius: 1.65rem;
+    background: linear-gradient(135deg, rgba(23, 43, 61, 0.94), rgba(12, 29, 46, 0.94));
+}
+.religion-place:nth-of-type(even) .religion-place__content { order: 2; }
+.religion-place__content { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; padding: clamp(2rem, 5vw, 4.5rem); }
+.religion-place__index { margin-bottom: 0.85rem; color: #d7b772; font-size: 0.7rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; }
+.religion-place h3 { margin: 0 0 1.2rem; color: #f6efe3; font-family: var(--font-display); font-size: clamp(1.8rem, 3vw, 3rem); font-weight: 500; line-height: 1.08; }
+.religion-place p { margin: 0 0 1rem; color: #bbc6ce; line-height: 1.75; }
+.religion-map-link { display: inline-flex; align-items: center; gap: 0.55rem; margin-top: 0.65rem; padding: 0.75rem 1rem; border: 1px solid rgba(219, 188, 126, 0.28); border-radius: 999px; color: #e3c27d; font-size: 0.78rem; font-weight: 700; text-decoration: none; }
+.religion-map-link:hover { color: #0b1a28; background: #dfbd7d; }
+.religion-video-placeholder,
+.religion-place__image { position: relative; display: flex; min-height: 100%; flex-direction: column; align-items: center; justify-content: center; gap: 0.65rem; margin: 0; padding: 2rem; overflow: hidden; background: radial-gradient(circle at 50% 35%, rgba(217, 184, 112, 0.17), transparent 30%), linear-gradient(160deg, #12293b, #091725); color: #f0e8da; text-align: center; }
+.religion-video-placeholder::before { width: 11rem; height: 16rem; border: 1px solid rgba(223, 189, 125, 0.18); border-bottom: 0; border-radius: 6rem 6rem 0 0; content: ""; }
+.religion-video-placeholder__icon { position: absolute; top: 50%; display: grid; width: 4.4rem; height: 4.4rem; place-items: center; border: 1px solid rgba(223, 189, 125, 0.5); border-radius: 50%; background: rgba(8, 23, 39, 0.72); color: #dfbd7d; font-size: 1.2rem; transform: translateY(-70%); }
+.religion-video-placeholder strong { margin-top: 0.5rem; font-family: var(--font-display); font-size: 1.2rem; }
+.religion-video-placeholder > span { max-width: 260px; color: #99aab6; font-size: 0.75rem; line-height: 1.5; }
+.religion-video-placeholder__badge { position: absolute; top: 1.2rem; right: 1.2rem; padding: 0.55rem 0.75rem; border: 1px solid rgba(223, 189, 125, 0.3); border-radius: 999px; color: #e0c080; background: rgba(8, 23, 39, 0.7); font-size: 0.68rem; font-weight: 700; text-transform: uppercase; }
+.religion-place--heritage { border-color: rgba(223, 189, 125, 0.3); }
+.religion-place__image img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.religion-place__image::after { position: absolute; inset: 40% 0 0; background: linear-gradient(transparent, rgba(4, 13, 22, 0.94)); content: ""; }
+.religion-place__image .religion-video-placeholder__icon { z-index: 1; background: rgba(8, 23, 39, 0.82); }
+.religion-place__image figcaption { position: absolute; right: 1.5rem; bottom: 1.5rem; left: 1.5rem; z-index: 1; display: grid; gap: 0.35rem; text-align: left; }
+.religion-place__image figcaption span { color: #f1d18d; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; }
+.religion-place__image figcaption small { color: #d4dde3; }
+.religion-living__grid,
+.religion-traditions__grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+.religion-living article,
+.religion-traditions article { padding: clamp(1.5rem, 3vw, 2.5rem); border: 1px solid rgba(173, 197, 209, 0.13); border-radius: 1.25rem; background: rgba(18, 39, 57, 0.72); }
+.religion-living article > i { color: #dfbd7d; font-size: 1.2rem; }
+.religion-living h4,
+.religion-traditions h4 { margin: 0.8rem 0 0.6rem; color: #f2ece2; font-family: var(--font-display); font-size: 1.5rem; }
+.religion-living p,
+.religion-traditions p { margin: 0; color: #aebac4; line-height: 1.7; }
+.religion-traditions__grid { grid-template-columns: repeat(4, 1fr); }
+.religion-traditions article > span { color: #d9b873; font-family: var(--font-display); font-size: 1.55rem; }
+.religion-music { display: grid; grid-template-columns: auto minmax(0, 1fr) minmax(220px, 0.42fr); gap: 2rem; align-items: center; padding: clamp(2rem, 5vw, 4.5rem); border: 1px solid rgba(223, 189, 125, 0.28); border-radius: 2rem; background: linear-gradient(120deg, rgba(37, 54, 66, 0.95), rgba(14, 29, 44, 0.95)); }
+.religion-music__icon { display: grid; width: 5rem; height: 5rem; place-items: center; border: 1px solid rgba(223, 189, 125, 0.4); border-radius: 50%; color: #dfbd7d; font-size: 1.5rem; }
+.religion-recording { display: grid; gap: 0.45rem; padding: 1.4rem; border-left: 1px solid rgba(223, 189, 125, 0.25); color: #f0e8db; }
+.religion-recording i { color: #dfbd7d; font-size: 1.4rem; }
+.religion-recording span { color: #91a3af; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; }
+@media (max-width: 900px) {
+    .religion-history { grid-template-columns: 1fr; }
+    .religion-history .religion-section-heading { position: static; }
+    .religion-place { grid-template-columns: 1fr; }
+    .religion-place:nth-of-type(even) .religion-place__content { order: 0; }
+    .religion-video-placeholder,
+    .religion-place__image { min-height: 320px; }
+    .religion-traditions__grid { grid-template-columns: repeat(2, 1fr); }
+    .religion-music { grid-template-columns: auto 1fr; }
+    .religion-recording { grid-column: 1 / -1; border-top: 1px solid rgba(223, 189, 125, 0.25); border-left: 0; }
+}
+@media (max-width: 600px) {
+    .religion-shell { gap: 4rem; }
+    .religion-hero { padding: 1.5rem; border-radius: 1.35rem; }
+    .religion-hero h2 { font-size: clamp(2.25rem, 12vw, 3.2rem); }
+    .religion-hero__facts { grid-template-columns: 1fr; }
+    .religion-chapter-nav { top: calc(var(--nav-height, 72px) + 0.55rem); justify-content: flex-start; width: 100%; margin: -2.8rem auto -2rem; overflow-x: auto; border-radius: 1rem; scrollbar-width: none; }
+    .religion-chapter-nav::-webkit-scrollbar { display: none; }
+    .religion-chapter-nav a { flex: 0 0 auto; }
+    .religion-timeline::before { left: 0.35rem; }
+    .religion-timeline article { grid-template-columns: 1fr; gap: 0.55rem; padding-left: 1.75rem; }
+    .religion-timeline article::before { left: 0.08rem; }
+    .religion-timeline time { text-align: left; }
+    .religion-place { min-height: 0; border-radius: 1.2rem; }
+    .religion-place__content { padding: 1.5rem; }
+    .religion-video-placeholder,
+    .religion-place__image { min-height: 260px; }
+    .religion-living__grid,
+    .religion-traditions__grid { grid-template-columns: 1fr; }
+    .religion-music { grid-template-columns: 1fr; padding: 1.5rem; border-radius: 1.35rem; }
+    .religion-music__icon { width: 3.5rem; height: 3.5rem; }
+}
+/* =========================================================
+   PATRIMONIU CULTURAL — ATELIERUL MEMORIEI
+========================================================= */
+.cultural-archive {
+    position: relative;
+    isolation: isolate;
+    background:
+        radial-gradient(circle at 7% 12%, rgba(190, 68, 48, 0.13), transparent 30rem),
+        radial-gradient(circle at 92% 48%, rgba(201, 153, 74, 0.1), transparent 34rem),
+        #0a1724;
+}
+.cultural-archive::before {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    opacity: 0.25;
+    background-image: repeating-linear-gradient(45deg, transparent 0 22px, rgba(231, 195, 124, 0.05) 22px 23px);
+    content: "";
+    mask-image: linear-gradient(to bottom, #000, transparent 62%);
+}
+.cultural-archive__shell { display: grid; gap: clamp(3rem, 7vw, 7rem); }
+.culture-hero {
+    position: relative;
+    overflow: hidden;
+    padding: clamp(2rem, 6vw, 5.5rem);
+    border: 1px solid rgba(225, 191, 119, 0.24);
+    border-radius: 2rem;
+    background:
+        linear-gradient(110deg, rgba(11, 27, 41, 0.98) 0 58%, rgba(66, 31, 29, 0.9)),
+        url("../img/patrimoniu bustuchin.webp") center / cover;
+    box-shadow: 0 32px 90px rgba(0, 0, 0, 0.3);
+}
+.culture-hero::after {
+    position: absolute;
+    top: -7rem;
+    right: -7rem;
+    width: 25rem;
+    height: 25rem;
+    border: 1px solid rgba(233, 194, 112, 0.2);
+    border-radius: 50%;
+    box-shadow: 0 0 0 3rem rgba(233, 194, 112, 0.025), 0 0 0 7rem rgba(233, 194, 112, 0.018);
+    content: "";
+}
+.culture-hero__eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    color: #e4bd72;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+.culture-hero h2 {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 1rem 0;
+    color: #fbf2e2;
+    font-family: var(--font-display);
+    font-size: clamp(2.8rem, 6.5vw, 6.4rem);
+    font-weight: 500;
+    line-height: 0.94;
+}
+.culture-hero > p {
+    position: relative;
+    z-index: 1;
+    max-width: 780px;
+    color: #c7d0d5;
+    font-size: clamp(1rem, 1.45vw, 1.18rem);
+    line-height: 1.8;
+}
+.culture-hero__index {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 1px;
+    margin-top: 2.8rem;
+    overflow: hidden;
+    border: 1px solid rgba(227, 191, 116, 0.18);
+    border-radius: 1.1rem;
+    background: rgba(227, 191, 116, 0.13);
+}
+.culture-hero__index a {
+    display: grid;
+    gap: 0.25rem;
+    min-width: 0;
+    padding: 1.15rem;
+    background: rgba(8, 22, 35, 0.88);
+    text-decoration: none;
+    transition: 180ms ease;
+}
+.culture-hero__index a:hover { background: rgba(117, 50, 40, 0.74); }
+.culture-hero__index span { color: #dcae60; font-family: var(--font-display); font-size: 1.35rem; }
+.culture-hero__index strong { color: #f4eadb; font-size: 0.82rem; }
+.culture-hero__index small { overflow: hidden; color: #91a2ad; font-size: 0.68rem; text-overflow: ellipsis; white-space: nowrap; }
+.cultural-archive .section-content { display: grid; gap: clamp(1.5rem, 4vw, 3rem); }
+.cultural-archive .culture-person,
+.cultural-archive .culture-living,
+.cultural-archive .culture-publication {
+    position: relative;
+    gap: 0;
+    min-height: 600px;
+    overflow: hidden;
+    border: 1px solid rgba(191, 205, 211, 0.13);
+    border-radius: 1.7rem;
+    background: linear-gradient(135deg, rgba(24, 43, 57, 0.96), rgba(12, 28, 43, 0.96));
+    box-shadow: 0 22px 65px rgba(0, 0, 0, 0.2);
+}
+.cultural-archive .culture-person::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    height: 3px;
+    background: linear-gradient(90deg, #b84d3a, #dfb866, transparent 75%);
+    content: "";
+}
+.cultural-archive .culture-person > .section-block__content,
+.cultural-archive .culture-living > .section-block__content,
+.cultural-archive .culture-publication > .section-block__content {
+    display: block;
+    align-self: stretch;
+    padding: clamp(2rem, 5vw, 4.5rem);
+}
+.culture-person__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    margin-bottom: 1rem;
+}
+.culture-person__meta span {
+    padding: 0.4rem 0.65rem;
+    border: 1px solid rgba(224, 185, 105, 0.25);
+    border-radius: 999px;
+    color: #deb96e;
+    background: rgba(224, 185, 105, 0.06);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+.cultural-archive .culture-person .section-block__title,
+.cultural-archive .culture-living .section-block__title,
+.cultural-archive .culture-publication .section-block__title {
+    margin-bottom: 1.4rem;
+    color: #f7eee0;
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 3.6vw, 3.7rem);
+    font-weight: 500;
+    line-height: 1.04;
+}
+.cultural-archive .culture-person .section-block__text,
+.cultural-archive .culture-living .section-block__text,
+.cultural-archive .culture-publication .section-block__text {
+    color: #b9c4cc;
+    font-size: 1rem;
+    line-height: 1.78;
+}
+.cultural-archive .culture-person > .section-block__media,
+.cultural-archive .culture-living > .section-block__media,
+.cultural-archive .culture-living > .village__media,
+.cultural-archive .culture-publication > .section-block__media {
+    align-self: stretch;
+    min-height: 100%;
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+    background: #102638;
+}
+.cultural-archive .culture-person > .section-block__media img,
+.cultural-archive .culture-publication > .section-block__media img { width: 100%; height: 100%; object-fit: cover; }
+.cultural-archive .culture-person--iustina > .section-block__media img { object-position: center 18%; }
+.cultural-archive .culture-person--stefan > .section-block__media img { object-position: center; }
+.cultural-archive .culture-person--nicodim > .section-block__media img { object-position: center 20%; }
+.cultural-archive .culture-person--bodescu > .section-block__media img { object-position: center 16%; }
+.cultural-archive .culture-living { min-height: 520px; border-color: rgba(220, 171, 83, 0.2); }
+.cultural-archive .culture-living .video-preview { height: 100%; min-height: 520px; border-radius: 0; }
+.cultural-archive .culture-publication { border-color: rgba(190, 68, 48, 0.25); background: linear-gradient(135deg, rgba(50, 37, 37, 0.96), rgba(13, 29, 43, 0.98)); }
+.cultural-archive .magazine-library {
+    padding: clamp(1.5rem, 4vw, 3.5rem);
+    border: 1px solid rgba(225, 185, 102, 0.24);
+    border-radius: 1.7rem;
+    background: linear-gradient(145deg, rgba(29, 45, 56, 0.96), rgba(12, 27, 40, 0.98));
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.22);
+}
+.cultural-archive .toponimie { margin-top: clamp(2rem, 5vw, 5rem); }
+@media (max-width: 900px) {
+    .culture-hero__index { grid-template-columns: repeat(2, 1fr); }
+    .culture-hero__index a:last-child { grid-column: 1 / -1; }
+    .cultural-archive .culture-person,
+    .cultural-archive .culture-living,
+    .cultural-archive .culture-publication { grid-template-columns: 1fr; min-height: 0; }
+    .cultural-archive .culture-person > .section-block__media,
+    .cultural-archive .culture-living > .section-block__media,
+    .cultural-archive .culture-living > .village__media,
+    .cultural-archive .culture-publication > .section-block__media { min-height: 360px; order: 2; }
+    .cultural-archive .culture-person > .section-block__content,
+    .cultural-archive .culture-living > .section-block__content,
+    .cultural-archive .culture-publication > .section-block__content { order: 1; }
+}
+@media (max-width: 600px) {
+    .cultural-archive__shell { gap: 3.5rem; }
+    .culture-hero { padding: 1.5rem; border-radius: 1.35rem; }
+    .culture-hero h2 { font-size: clamp(2.4rem, 12vw, 3.4rem); }
+    .culture-hero__index { display: flex; margin-right: -1.5rem; overflow-x: auto; border-right: 0; border-radius: 1rem 0 0 1rem; scrollbar-width: none; }
+    .culture-hero__index::-webkit-scrollbar { display: none; }
+    .culture-hero__index a { flex: 0 0 155px; }
+    .cultural-archive .culture-person,
+    .cultural-archive .culture-living,
+    .cultural-archive .culture-publication,
+    .cultural-archive .magazine-library { border-radius: 1.2rem; }
+    .cultural-archive .culture-person > .section-block__content,
+    .cultural-archive .culture-living > .section-block__content,
+    .cultural-archive .culture-publication > .section-block__content { padding: 1.5rem; }
+    .cultural-archive .culture-person > .section-block__media,
+    .cultural-archive .culture-living > .section-block__media,
+    .cultural-archive .culture-living > .village__media,
+    .cultural-archive .culture-publication > .section-block__media { min-height: 280px; }
+    .cultural-archive .culture-living .video-preview { min-height: 280px; }
+}
+/* Compoziție compactă pentru biografii și revista comunei. */
+.cultural-archive .culture-person,
+.cultural-archive .culture-living,
+.cultural-archive .culture-publication {
+    min-height: 0;
+}
+.cultural-archive .culture-story {
+    column-count: 2;
+    column-gap: clamp(1.75rem, 3vw, 3rem);
+    column-rule: 1px solid rgba(231, 198, 133, 0.1);
+}
+.cultural-archive .culture-story .section-block__text {
+    break-inside: avoid;
+    margin: 0 0 1rem;
+    font-size: 0.95rem;
+    line-height: 1.72;
+}
+.culture-editorial-board {
+    margin-top: 1.6rem;
+    padding: 1.2rem;
+    border: 1px solid rgba(225, 185, 102, 0.22);
+    border-radius: 1rem;
+    background: rgba(7, 21, 33, 0.48);
+}
+.culture-editorial-board__heading {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    margin-bottom: 0.9rem;
+    color: #e2bc71;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+.culture-editorial-board dl { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.65rem; margin: 0; }
+.culture-editorial-board dl > div { padding: 0.8rem; border-left: 2px solid rgba(205, 146, 73, 0.48); background: rgba(255, 255, 255, 0.025); }
+.culture-editorial-board dt { color: #899ba7; font-size: 0.68rem; letter-spacing: 0.05em; text-transform: uppercase; }
+.culture-editorial-board dd { margin: 0.25rem 0 0; color: #f0e5d5; font-family: var(--font-display); font-size: 1rem; }
+
+/* Scenele patrimoniului viu: imaginea conduce, povestea continuă dedesubt. */
+.cultural-archive .culture-living {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-color: rgba(220, 171, 83, 0.28);
+    border-radius: 1.75rem;
+    background: #0c1e2d;
+    box-shadow: 0 28px 70px rgba(1, 10, 19, 0.32);
+}
+.cultural-archive .culture-living > :is(.section-block__media, .village__media) {
+    position: relative;
+    order: 1;
+    width: 100%;
+    min-height: 0;
+    aspect-ratio: 16 / 8;
+    overflow: hidden;
+}
+.cultural-archive .culture-living > :is(.section-block__media, .village__media)::after {
+    position: absolute;
+    inset: auto 0 0;
+    z-index: 1;
+    height: 48%;
+    background: linear-gradient(180deg, transparent, #0c1e2d);
+    content: "";
+    pointer-events: none;
+}
+.cultural-archive .culture-living .video-preview {
+    min-height: 0;
+    height: 100%;
+    border-radius: 0;
+}
+.cultural-archive .culture-living .video-preview img { transition: transform 0.8s ease; }
+.cultural-archive .culture-living:hover .video-preview img { transform: scale(1.025); }
+.cultural-archive .culture-living > .section-block__content {
+    position: relative;
+    z-index: 2;
+    order: 2;
+    width: min(100% - 3rem, 980px);
+    margin: clamp(-5.25rem, -6vw, -3.5rem) auto 0;
+    padding: clamp(1.5rem, 3.2vw, 3rem) clamp(1.4rem, 3.6vw, 3.6rem) clamp(2rem, 4vw, 3.5rem);
+    border: 1px solid rgba(232, 194, 119, 0.2);
+    border-bottom: 0;
+    border-radius: 1.5rem 1.5rem 0 0;
+    background: linear-gradient(145deg, rgba(17, 40, 56, 0.97), rgba(9, 27, 40, 0.98));
+    box-shadow: 0 -18px 45px rgba(0, 0, 0, 0.2);
+}
+.cultural-archive .culture-living__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    margin-bottom: 0.9rem;
+    color: #e5bb68;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+.cultural-archive .culture-living .section-block__title { max-width: 820px; margin-bottom: 1.3rem; }
+.cultural-archive .culture-living .culture-story { max-width: 850px; }
+.cultural-archive .culture-living--voice { border-color: rgba(191, 83, 70, 0.3); }
+.cultural-archive .culture-living--voice .culture-living__eyebrow { color: #e39a87; }
+
+/* Atlasul toponimic: repere compacte, nu carduri editoriale supradimensionate. */
+.cultural-archive .toponimie {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 1rem;
+    width: 100%;
+    margin-top: clamp(3rem, 7vw, 6rem);
+    counter-reset: toponimie-card;
+}
+.toponimie__header {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+    gap: 0.8rem clamp(2rem, 6vw, 6rem);
+    align-items: end;
+    padding: 0.5rem 0 clamp(1.5rem, 3vw, 2.5rem);
+    border-bottom: 1px solid rgba(224, 183, 102, 0.26);
+}
+.toponimie__eyebrow {
+    grid-column: 1 / -1;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    color: #deb565;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+.toponimie__header h3 { margin: 0; color: #f5ecdf; font-family: var(--font-display); font-size: clamp(2.2rem, 4.6vw, 4.8rem); font-weight: 500; line-height: 0.98; }
+.toponimie__header p { max-width: 590px; margin: 0 0 0.4rem; color: #aebbc4; font-size: clamp(0.96rem, 1.3vw, 1.1rem); line-height: 1.75; }
+.cultural-archive .toponimie > .subsection {
+    counter-increment: toponimie-card;
+    position: relative;
+    grid-column: span 6;
+    display: grid;
+    grid-template-columns: 4.4rem minmax(0, 1fr);
+    gap: clamp(1rem, 2vw, 1.7rem);
+    width: 100%;
+    min-height: 0;
+    padding: clamp(1.5rem, 2.8vw, 2.6rem);
+    overflow: hidden;
+    border: 1px solid rgba(192, 211, 221, 0.12);
+    border-radius: 1.3rem;
+    background: linear-gradient(145deg, rgba(20, 43, 57, 0.92), rgba(10, 28, 41, 0.96));
+    box-shadow: 0 18px 42px rgba(0, 0, 0, 0.18);
+}
+.cultural-archive .toponimie > .subsection::before {
+    content: "0" counter(toponimie-card);
+    color: #dbae59;
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    line-height: 1;
+}
+.cultural-archive .toponimie > .subsection::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #d5a552, transparent 68%);
+    content: "";
+}
+.cultural-archive .toponimie > .toponimie__card--intro,
+.cultural-archive .toponimie > .subsection:last-child { grid-column: 1 / -1; }
+.cultural-archive .toponimie > .toponimie__card--intro { background: radial-gradient(circle at 88% 12%, rgba(192, 76, 55, 0.2), transparent 32%), linear-gradient(145deg, rgba(26, 49, 62, 0.96), rgba(10, 27, 40, 0.98)); }
+.cultural-archive .toponimie .section-block__content { display: block; width: 100%; padding: 0; }
+.cultural-archive .toponimie .section-block__title { max-width: 680px; margin: -0.18rem 0 1.15rem; color: #f5ecdf; font-size: clamp(1.65rem, 2.7vw, 2.65rem); line-height: 1.08; }
+.cultural-archive .toponimie .section-block__text { max-width: 760px; margin: 0 0 0.85rem; color: #b7c2c9; font-size: 0.96rem; line-height: 1.72; }
+.cultural-archive .toponimie .section-block__text:last-child { margin-bottom: 0; }
+
+/* =========================================================
+   EVENIMENTE — calendarul viu al comunei
+========================================================= */
+.section--events {
+    --event-accent: #d8aa58;
+    position: relative;
+    overflow: clip;
+    background:
+        radial-gradient(circle at 9% 15%, rgba(196, 70, 48, 0.1), transparent 27%),
+        radial-gradient(circle at 88% 46%, rgba(216, 170, 88, 0.08), transparent 25%),
+        linear-gradient(180deg, #081827, #0b2030 52%, #081827);
+}
+.section--events > .container { width: min(100% - 2rem, 1500px); }
+.events-hero {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1.18fr) minmax(420px, 0.82fr);
+    gap: clamp(2.5rem, 7vw, 7rem);
+    align-items: end;
+    margin-bottom: clamp(3rem, 7vw, 7rem);
+    padding: clamp(2.5rem, 6vw, 6.5rem);
+    overflow: hidden;
+    border: 1px solid rgba(226, 183, 101, 0.24);
+    border-radius: 2rem;
+    background: radial-gradient(circle at 82% 22%, rgba(190, 65, 46, 0.28), transparent 32%), linear-gradient(135deg, rgba(24, 49, 63, 0.98), rgba(8, 24, 38, 0.99));
+    box-shadow: 0 35px 90px rgba(0, 0, 0, 0.28);
+}
+.events-hero::before {
+    position: absolute;
+    inset: 1rem;
+    border: 1px solid rgba(229, 190, 113, 0.1);
+    border-radius: 1.35rem;
+    content: "";
+    pointer-events: none;
+}
+.events-hero__copy { position: relative; z-index: 1; }
+.events-hero__eyebrow,
+.event-card__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    color: var(--event-accent);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+.events-hero h2 { max-width: 820px; margin: 1rem 0 1.4rem; color: #f6eddf; font-family: var(--font-display); font-size: clamp(3.1rem, 6.2vw, 7rem); font-weight: 500; line-height: 0.9; letter-spacing: -0.035em; }
+.events-hero__copy > p { max-width: 700px; margin: 0; color: #b6c2c9; font-size: clamp(1rem, 1.4vw, 1.18rem); line-height: 1.75; }
+.events-hero__calendar { position: relative; z-index: 1; display: grid; gap: 0.65rem; }
+.events-hero__calendar a { display: grid; grid-template-columns: 3.2rem 6.2rem minmax(0, 1fr); gap: 0.9rem; align-items: center; min-height: 4.4rem; padding: 0.75rem 1rem; border: 1px solid rgba(224, 186, 112, 0.18); border-radius: 1rem; color: #e9e2d7; background: rgba(5, 20, 32, 0.64); transition: border-color 0.25s ease, transform 0.25s ease, background 0.25s ease; }
+.events-hero__calendar a:hover { transform: translateX(-6px); border-color: rgba(224, 186, 112, 0.5); background: rgba(19, 42, 55, 0.9); }
+.events-hero__calendar strong { color: #dcae5c; font-family: var(--font-display); font-size: 1.45rem; font-weight: 500; }
+.events-hero__calendar span { color: #f6eddf; font-size: 0.78rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; }
+.events-hero__calendar small { color: #94a4ae; font-size: 0.83rem; }
+.section--events .section-content { display: grid; gap: clamp(2rem, 5vw, 4.5rem); }
+.section--events .event-card {
+    --event-accent: #d8aa58;
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(420px, 0.95fr);
+    gap: 0;
+    min-height: 650px;
+    overflow: hidden;
+    border: 1px solid color-mix(in srgb, var(--event-accent) 30%, transparent);
+    border-radius: 1.75rem;
+    background: linear-gradient(145deg, rgba(19, 42, 56, 0.98), rgba(8, 25, 38, 0.99));
+    box-shadow: 0 28px 70px rgba(0, 0, 0, 0.24);
+}
+.section--events .event-card:nth-child(even) { grid-template-columns: minmax(420px, 0.95fr) minmax(0, 1.05fr); }
+.section--events .event-card:nth-child(even) > .section-block__content { order: 2; }
+.section--events .event-card:nth-child(even) > .video-preview { order: 1; }
+.section--events .event-card::before { position: absolute; z-index: 3; inset: 0 auto 0 0; width: 3px; background: linear-gradient(180deg, transparent, var(--event-accent) 18%, var(--event-accent) 82%, transparent); content: ""; }
+.section--events .event-card > .section-block__content { display: block; align-self: stretch; padding: clamp(2.2rem, 4.5vw, 5rem); }
+.section--events .event-card__eyebrow { margin-bottom: 1rem; }
+.section--events .event-card .section-block__title { max-width: 720px; margin: 0 0 1.5rem; color: #f7eee2; font-family: var(--font-display); font-size: clamp(2.3rem, 4vw, 4.6rem); font-weight: 500; line-height: 0.98; letter-spacing: -0.025em; }
+.section--events .event-card .section-block__text { max-width: 760px; margin: 0 0 1rem; color: #b8c4cb; font-size: 1rem; line-height: 1.75; text-indent: 0; }
+.section--events .event-card > .video-preview { align-self: stretch; width: 100%; height: 100%; min-height: 100%; margin: 0; overflow: hidden; border: 0; border-radius: 0; }
+.section--events .event-card > .video-preview::after { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(8, 25, 38, 0.56), transparent 35%), linear-gradient(0deg, rgba(7, 20, 31, 0.28), transparent 55%); content: ""; pointer-events: none; }
+.section--events .event-card:nth-child(even) > .video-preview::after { background: linear-gradient(-90deg, rgba(8, 25, 38, 0.56), transparent 35%), linear-gradient(0deg, rgba(7, 20, 31, 0.28), transparent 55%); }
+.section--events .event-card > .video-preview img { height: 100%; object-fit: cover; transition: transform 0.8s ease; }
+.section--events .event-card:hover > .video-preview img { transform: scale(1.035); }
+.section--events .event-card > .event-card__poster { position: relative; align-self: stretch; width: 100%; height: 100%; min-height: 100%; overflow: hidden; background: #071522; }
+.section--events .event-card > .event-card__poster::after { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(8, 25, 38, 0.28), transparent 35%); content: ""; pointer-events: none; }
+.section--events .event-card:nth-child(even) > .event-card__poster::after { background: linear-gradient(-90deg, rgba(8, 25, 38, 0.28), transparent 35%); }
+.section--events .event-card > .event-card__poster img { width: 100%; height: 100%; object-fit: cover; object-position: center top; transition: transform 0.8s ease; }
+.section--events .event-card:hover > .event-card__poster img { transform: scale(1.025); }
+.section--events .event-card .culture-story { max-width: 780px; }
+.event-card__facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; margin-top: 1.8rem; overflow: hidden; border: 1px solid rgba(226, 190, 120, 0.17); border-radius: 0.9rem; background: rgba(226, 190, 120, 0.15); }
+.event-card__facts span { display: flex; flex-direction: column; gap: 0.2rem; padding: 0.85rem 1rem; color: #91a2ac; font-size: 0.72rem; line-height: 1.45; background: rgba(7, 23, 35, 0.94); }
+.event-card__facts strong { color: #eee5d8; font-size: 0.84rem; }
+.section--events .event-card--folklore { --event-accent: #d36b4f; }
+.section--events .event-card--music { --event-accent: #6fa0b8; }
+.section--events .event-card--seniors { --event-accent: #b8a872; }
+.section--events .event-card--children { --event-accent: #d9b650; }
+.section--events .event-card--health { --event-accent: #69aa70; }
+.section--events .event-card--football { --event-accent: #e3b62f; }
+.section--events .event-card--motorsport { --event-accent: #c87549; background: linear-gradient(145deg, rgba(32, 39, 44, 0.98), rgba(9, 22, 31, 0.99)); }
+@media (min-width: 901px) {
+    .cultural-archive .culture-person,
+    .cultural-archive .culture-living,
+    .cultural-archive .culture-publication {
+        display: grid;
+        grid-template-columns: minmax(0, 1.38fr) minmax(320px, 0.62fr);
+        align-items: stretch;
+    }
+    .cultural-archive .culture-person:nth-of-type(even),
+    .cultural-archive .culture-living:nth-of-type(even) {
+        grid-template-columns: minmax(320px, 0.62fr) minmax(0, 1.38fr);
+    }
+    .cultural-archive .culture-person:nth-of-type(even) > .section-block__content,
+    .cultural-archive .culture-living:nth-of-type(even) > .section-block__content { order: 2; }
+    .cultural-archive .culture-person:nth-of-type(even) > :is(.section-block__media, .village__media),
+    .cultural-archive .culture-living:nth-of-type(even) > :is(.section-block__media, .village__media) { order: 1; }
+    .cultural-archive .culture-person > .section-block__content,
+    .cultural-archive .culture-living > .section-block__content,
+    .cultural-archive .culture-publication > .section-block__content { padding: clamp(2rem, 3.6vw, 3.5rem); }
+    .cultural-archive .culture-person .section-block__title,
+    .cultural-archive .culture-living .section-block__title,
+    .cultural-archive .culture-publication .section-block__title { max-width: 780px; font-size: clamp(2rem, 3vw, 3.25rem); }
+    .cultural-archive .culture-person > .section-block__media,
+    .cultural-archive .culture-living > :is(.section-block__media, .village__media),
+    .cultural-archive .culture-publication > .section-block__media { min-height: 0; height: 100%; max-height: 760px; }
+    .cultural-archive .culture-living .video-preview { min-height: 0; height: 100%; }
+    .cultural-archive .culture-publication > .section-block__media { padding: 2rem; background: radial-gradient(circle at center, rgba(191, 68, 50, 0.16), transparent 65%), #0d2131; }
+    .cultural-archive .culture-publication > .section-block__media img { object-fit: contain; filter: drop-shadow(0 20px 35px rgba(0, 0, 0, 0.35)); }
+}
+@media (max-width: 900px) {
+    .cultural-archive .culture-story { column-count: 1; }
+    .culture-editorial-board dl { grid-template-columns: 1fr; }
+}
+/* Portrete editoriale — imagine pe întreaga suprafață, text într-un singur flux. */
+.cultural-archive .culture-person,
+.cultural-archive .culture-publication {
+    position: relative;
+    isolation: isolate;
+    display: block;
+    min-height: clamp(680px, 72vw, 980px);
+    overflow: hidden;
+    background: #081725;
+}
+.cultural-archive .culture-person > .section-block__media,
+.cultural-archive .culture-publication > .section-block__media {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    min-height: 0;
+    padding: 0;
+    margin: 0;
+    background: #081725;
+}
+.cultural-archive .culture-person > .section-block__media::after,
+.cultural-archive .culture-publication > .section-block__media::after {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg, rgba(5, 17, 29, 0.98) 0%, rgba(5, 17, 29, 0.92) 48%, rgba(5, 17, 29, 0.5) 76%, rgba(5, 17, 29, 0.32) 100%),
+        linear-gradient(0deg, rgba(5, 17, 29, 0.96), transparent 45%);
+    content: "";
+}
+.cultural-archive .culture-person > .section-block__media img,
+.cultural-archive .culture-publication > .section-block__media img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: saturate(0.82) contrast(1.04);
+}
+.cultural-archive .culture-person--iustina > .section-block__media img { object-position: 78% 20%; }
+.cultural-archive .culture-person--stefan > .section-block__media img { object-position: 78% center; }
+.cultural-archive .culture-person--nicodim > .section-block__media img { object-position: 78% 20%; }
+.cultural-archive .culture-person--bodescu > .section-block__media img { object-position: 80% 18%; }
+.cultural-archive .culture-publication > .section-block__media img { object-position: 84% center; }
+.cultural-archive .culture-person > .section-block__content,
+.cultural-archive .culture-publication > .section-block__content {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: min(780px, 72%);
+    min-height: inherit;
+    padding: clamp(2.25rem, 5vw, 5rem);
+}
+.cultural-archive .culture-person .section-block__title,
+.cultural-archive .culture-publication .section-block__title {
+    max-width: 720px;
+    font-size: clamp(2.35rem, 4vw, 4.5rem);
+    text-wrap: balance;
+}
+.cultural-archive .culture-person .culture-story,
+.cultural-archive .culture-publication .culture-story {
+    max-width: 700px;
+    column-count: 1;
+    column-rule: 0;
+}
+.cultural-archive .culture-person .culture-story .section-block__text,
+.cultural-archive .culture-publication .culture-story .section-block__text {
+    margin-bottom: 1rem;
+    color: rgba(232, 237, 239, 0.82);
+    font-size: 1rem;
+    line-height: 1.76;
+    text-shadow: 0 2px 16px rgba(0, 0, 0, 0.38);
+}
+.cultural-archive .culture-person::after,
+.cultural-archive .culture-publication::after {
+    position: absolute;
+    right: 2rem;
+    bottom: 2rem;
+    z-index: 2;
+    width: 5rem;
+    height: 5rem;
+    border-right: 1px solid rgba(229, 190, 111, 0.48);
+    border-bottom: 1px solid rgba(229, 190, 111, 0.48);
+    content: "";
+}
+.cultural-archive .culture-publication {
+    min-height: 760px;
+    border-color: rgba(222, 176, 91, 0.3);
+}
+.cultural-archive .culture-publication > .section-block__media::after {
+    background:
+        linear-gradient(90deg, rgba(31, 17, 20, 0.98) 0%, rgba(22, 20, 27, 0.92) 54%, rgba(18, 23, 30, 0.48) 82%),
+        linear-gradient(0deg, rgba(17, 18, 24, 0.96), transparent 48%);
+}
+.cultural-archive .culture-publication > .section-block__content { width: min(850px, 75%); }
+.cultural-archive .culture-publication .culture-editorial-board { max-width: 760px; background: rgba(8, 18, 27, 0.74); backdrop-filter: blur(12px); }
+@media (max-width: 900px) {
+    .cultural-archive .culture-person,
+    .cultural-archive .culture-publication { min-height: 0; }
+    .cultural-archive .culture-person > .section-block__content,
+    .cultural-archive .culture-publication > .section-block__content {
+        width: 100%;
+        min-height: 0;
+        padding: clamp(1.5rem, 6vw, 2.5rem);
+    }
+    .cultural-archive .culture-person > .section-block__media,
+    .cultural-archive .culture-publication > .section-block__media {
+        position: relative;
+        z-index: 0;
+        inset: auto;
+        height: clamp(300px, 80vw, 480px);
+        min-height: 0;
+        order: 0;
+    }
+    .cultural-archive .culture-person > .section-block__media::after,
+    .cultural-archive .culture-publication > .section-block__media::after {
+        background: linear-gradient(0deg, #081725 0%, rgba(8, 23, 37, 0.15) 60%, transparent 100%);
+    }
+    .cultural-archive .culture-person > .section-block__media img,
+    .cultural-archive .culture-publication > .section-block__media img { object-position: center 18%; }
+    .cultural-archive .culture-publication > .section-block__media img { object-fit: contain; padding: 1rem; background: #101e29; }
+    .cultural-archive .culture-person::after,
+    .cultural-archive .culture-publication::after { display: none; }
+}

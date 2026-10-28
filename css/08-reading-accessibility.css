@@ -1,0 +1,118 @@
+.reading-tools { position: fixed; left: 0; right: 0; z-index: 990; width: 100%; margin: 0; padding: 7px clamp(12px, 3vw, 42px); display: flex; align-items: center; justify-content: space-between; gap: 16px; background: rgba(12, 25, 40, .98); color: #f4e9d4; border-block: 1px solid #726044; box-shadow: 0 5px 18px #0003; }
+.reading-tools__identity { flex: 0 0 auto; }
+.reading-tools__identity small { display: block; color: #d2b477; font-size: .64rem; letter-spacing: .08em; }
+.reading-tools h2 { margin: 0; color: #f4e9d4; font: 1rem/1.2 'DM Serif Display', Georgia, serif; }
+.reading-tools__actions { display: flex; align-items: center; justify-content: flex-end; gap: 7px; }
+.reading-tools button, .reading-tools select, .reading-tools summary, .chapter-bookmark { min-height: 36px; padding: 7px 11px; border: 1px solid #806c47; border-radius: 7px; background: #182c3d; color: #f4e9d4; font: 500 .76rem/1.3 'Poppins', sans-serif; cursor: pointer; white-space: nowrap; }
+.reading-tools button:disabled { opacity: .45; cursor: default; }
+.reading-tools [data-save-position] { background: #d8b775; color: #1e2929; }
+.reading-tools label { display: flex; align-items: center; gap: 5px; font-size: .72rem; }
+.reading-tools [aria-pressed="true"], .chapter-bookmark[aria-pressed="true"] { background: #f1e3bf; color: #253a32; }
+.reading-tools__more { position: relative; }
+.reading-tools summary { list-style: none; }
+.reading-tools summary::-webkit-details-marker { display: none; }
+.reading-tools__drawer { position: absolute; right: 0; top: calc(100% + 12px); width: min(340px, calc(100vw - 24px)); max-height: 60vh; overflow-y: auto; padding: 16px; display: grid; gap: 12px; background: #102333; border: 1px solid #8b754c; border-radius: 12px; box-shadow: 0 12px 32px #0005; }
+.reading-tools__drawer a { color: #f0d7a1; text-decoration: underline; }
+.reading-tools__drawer p { font-size: .75rem; line-height: 1.6; color: #d8d4c8; }
+.reading-tools__bookmarks { display: flex; flex-wrap: wrap; gap: 10px; }
+.reading-tools__status { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+.chapter-bookmark { margin: 10px 0 20px; }
+main [id] { scroll-margin-top: calc(var(--reading-fixed-bottom, 120px) + 16px); }
+html[data-reading-size="112"] main :is(.section-block__text,.village__text,.longform__text p,.history-card p) { font-size: calc(var(--reading-base-font, 1rem) * 1.12) !important; line-height: 1.9; }
+html[data-reading-size="125"] main :is(.section-block__text,.village__text,.longform__text p,.history-card p) { font-size: calc(var(--reading-base-font, 1rem) * 1.25) !important; line-height: 1.9; }
+.material-pending { display: block; font-size: .75rem; line-height: 1.5; font-weight: 500; margin-top: 4px; }
+.magazine-edition:disabled, a[aria-disabled="true"] { opacity: .65; cursor: default; }
+.material-note, .image-pending { display: block; padding: 18px; border-radius: 12px; background: #f2ecdf; color: #4a493e; line-height: 1.6; }
+.image-pending { min-height: 140px; display: grid; place-content: center; text-align: center; }
+.search-chapter-filter { padding: 10px 14px; margin: 0 24px 12px; border-radius: 8px; max-width: calc(100% - 48px); background: #fffdf7; color: #233c35; border: 1px solid #a68e60; font: inherit; }
+.site-search mark { background: #f2dd9a; color: #172c25; border-radius: 3px; }
+.map-directory { margin: 24px 0; padding: 20px; border: 1px solid #bba778; border-radius: 14px; background: #f8f3e8; color: #233c35; }
+.map-directory summary { cursor: pointer; font-weight: 600; min-height: 44px; }
+.map-directory ul { list-style: none; padding: 0; display: grid; gap: 12px; }
+.map-directory li { display: flex; gap: 16px; justify-content: space-between; border-bottom: 1px solid #d5c8a9; padding: 10px 0; }
+.map-directory a { color: #254d43; text-decoration: underline; }
+.skip-link { position: fixed; top: 8px; left: 8px; transform: translateY(-180%); z-index: 20000; background: #fff; color: #173c30; padding: 14px; border-radius: 8px; }
+.skip-link:focus { transform: none; }
+:focus-visible { outline: 3px solid #b77a12; outline-offset: 4px; }
+[hidden] { display: none !important; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto !important; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
+@media (max-width: 900px) {
+  .reading-tools { gap: 5px; padding: 6px 10px; flex-wrap: wrap; }
+  .reading-tools__identity { display: flex; align-items: baseline; gap: 8px; width: 100%; }
+  .reading-tools__identity small { font-size: .6rem; }
+  .reading-tools h2 { font-size: .82rem; }
+  .reading-tools__actions { width: 100%; justify-content: space-between; gap: 4px; }
+  .reading-tools button, .reading-tools select, .reading-tools summary { padding: 6px; font-size: .65rem; min-height: 36px; }
+  .reading-tools__size-label { display: none; }
+}
+@media (max-width: 360px) {
+  .reading-tools__identity small { display: none; }
+  .reading-tools button, .reading-tools select, .reading-tools summary { font-size: .6rem; padding-inline: 4px; }
+}
+/* Warm paper, dark ink and serif prose; photographs and interactive media retain their colors. */
+html.book-reading body { background: #f4eddd !important; color: #332c23; }
+html.book-reading body::before, html.book-reading body::after { display: none; }
+html.book-reading main > :not(#hero) { --text: #332c23; --muted: #51483c; --gold: #866124; --gold-soft: #795a2c; --border: #d6c7a7; --surface: #eee4d0; --bg-primary: #f4eddd; --bg-secondary: #eee4d0; color: #332c23; background: #f4eddd !important; }
+html.book-reading main > :not(#hero)::before, html.book-reading main > :not(#hero)::after { background: none !important; }
+html.book-reading main > :not(#hero) :is(.split-layout,.history-card,.history-highlight,.longform,.village,.section-block__content,.toponimie__card,.project-method,.project-person,.magazine-reader,.weather-card,.weather-current,.facility-card,.culture-house-card,.discovery-fact,.section-block,.memory-card,.memory-object,.memory-portrait) { background: #faf5e9 !important; color: #332c23; border-color: #d6c7a7 !important; box-shadow: 0 3px 16px #6753320a !important; }
+html.book-reading main > :not(#hero) :is(h1,h2,h3,h4,h5,p,li,blockquote,.section-block__text,.village__text,.longform__text,figcaption) { color: #332c23 !important; text-shadow: none !important; }
+html.book-reading main > :not(#hero) :is(p,li,blockquote,.section-block__text,.village__text,.longform__text) { font-family: Georgia, 'Times New Roman', serif; line-height: 1.9; }
+html.book-reading main > :not(#hero) :is(h2,h3,h4) { font-family: Georgia, 'Times New Roman', serif; }
+html.book-reading main > :not(#hero) a { color: #79531d; }
+html.book-reading main > :not(#hero) :is(.chapter-panorama,.memory-card__media,.facility-card__media,.culture-house-card__media) :is(p,h2,h3,figcaption) { background: #faf5e9e8; color: #332c23 !important; }
+html.book-reading .chapter-transition { background: #eee4d0; color: #574329; }
+html.book-reading .chapter-transition :is(strong,span,p) { color: #574329 !important; }
+html.book-reading .reading-tools { background: #eee4d0; color: #332c23; border-color: #c7b58d; }
+html.book-reading .reading-tools h2, html.book-reading .reading-tools small { color: #574329; }
+html.book-reading .reading-tools :is(button,select,summary) { background: #faf5e9; color: #332c23; }
+html.book-reading .reading-tools [data-save-position], html.book-reading .reading-tools [aria-pressed="true"] { background: #735329; color: #fff7e8; }
+html.book-reading .reading-tools__drawer { background: #faf5e9; color: #332c23; }
+html.book-reading .reading-tools__drawer :is(a,p) { color: #574329; }
+/* Card values and labels have explicit pale colors in the original dark theme. */
+html.book-reading main > :not(#hero) :is(span,strong,small,em,b,label) { color: #403629 !important; }
+html.book-reading .discover-weather .weather-scene { background: #eee4d0 !important; border-color: #c9b993; box-shadow: none; }
+html.book-reading .discover-weather .weather-scene::before,
+html.book-reading .discover-weather .weather-scene::after { display: none; }
+html.book-reading .discover-weather :is(.weather-current,.weather-card,.weather-detail,.weather-current__icon-wrap,.weather-scene__live) { background: #faf5e9 !important; border-color: #d6c7a7 !important; }
+html.book-reading .discover-weather :is(div,span,strong,small,p,h2,h3,i) { color: #403629 !important; text-shadow: none !important; }
+html.book-reading .discover-weather :is(.weather-current__updated,.weather-detail__label,.weather-desc,.weather-card__meta,.weather-unavailable span) { color: #594c39 !important; }
+html.book-reading main > :not(#hero) :is(button,summary,.longform__toggle) { background-color: #eee4d0; color: #403629; border-color: #baa580; }
+html.book-reading .chapter-panorama figcaption { position: static; background: #faf5e9 !important; color: #403629 !important; padding: 20px 24px; }
+html.book-reading .chapter-panorama figcaption :is(span,strong) { color: #403629 !important; }
+html.book-reading .chapter-panorama::after { display: none; }
+/* Pair paper surfaces with ink text, including nested editorial panels and tables. */
+html.book-reading main > :not(#hero) :is(section,article,
+  .discover-media,.discover-media__label,.map-explorer,.community-map,.community-map__legend,.community-map__hint,
+  .memory-hero__media,.memory-year,.memory-mini-slider__controls,.memory-industry__cards,
+  .memory-archive__grid,.religion-chapter-nav,.culture-editorial-board,.senior-gallery__controls,
+  .tourism-portal__feature,.tourism-portal__facts,.tourism-stop,
+  .education-portal__hero,.education-portal__milestones,.infrastructure-portal__hero,.infrastructure-portal__facts,
+  .education-feature__media-label,.project-person__portrait-caption,
+  #industrie-altadata,#arhiva-bustuchinului) {
+  background: #faf5e9 !important; border-color: #d6c7a7 !important; color: #332c23 !important; box-shadow: none !important;
+}
+html.book-reading main > :not(#hero) :is(section,article)::before,
+html.book-reading main > :not(#hero) :is(section,article)::after { background: none !important; box-shadow: none !important; }
+html.book-reading main > :not(#hero) :is(th,td,dt,dd,time,figcaption,.mayor-welcome__vertical-text,.mayor-welcome__eyebrow,.religion-place__index) { color: #403629 !important; }
+html.book-reading main > :not(#hero) :is(figcaption,th,td,.religion-place__index) { background-color: #faf5e9 !important; border-color: #c9b993 !important; }
+html.book-reading main > :not(#hero) a { color: #624218 !important; }
+html.book-reading main > :not(#hero) :is(input,select,textarea,.leaflet-control-zoom a,.leaflet-control-attribution) { background: #faf5e9 !important; color: #403629 !important; border-color: #b8a37f !important; }
+html.book-reading main > :not(#hero) input::placeholder { color: #655640; opacity: 1; }
+html.book-reading main > :not(#hero) .reveal { opacity: 1 !important; }
+html.book-reading main > :not(#hero) :is(.religion-hero__facts > div,.transformation-atlas__footer,.transformation-atlas__footer a) { background: #faf5e9 !important; color: #403629 !important; border-color: #d6c7a7 !important; }
+html.book-reading main > :not(#hero) .culture-hero__index a { background: #eee4d0 !important; border-color: #c9b993 !important; color: #403629 !important; }
+html.book-reading main > :not(#hero) .events-hero__calendar a { background: #eee4d0 !important; color: #403629 !important; border-color: #c9b993 !important; }
+html.book-reading main > :not(#hero) :is(.event-card__facts > span,[class$="__facts"] > div,[class$="__facts"] > span) { background: #eee4d0 !important; color: #403629 !important; border-color: #c9b993 !important; }
+html.book-reading main > :not(#hero) [class*="__media"] > span { background: #faf5e9 !important; color: #403629 !important; border-color: #c9b993 !important; }
+/* Remove photographic/gradient backdrops behind prose; actual <img> photos remain. */
+html.book-reading main > :not(#hero),
+html.book-reading main > :not(#hero) *:not(.leaflet-container,.leaflet-container *) { background-image: none !important; }
+html.book-reading main > :not(#hero) *:not(.leaflet-container,.leaflet-container *)::before,
+html.book-reading main > :not(#hero) *:not(.leaflet-container,.leaflet-container *)::after { background-image: none !important; }
+html.book-reading main > :not(#hero) :is(.culture-hero,.religion-hero,.events-hero) { background: #faf5e9 !important; }
+html.book-reading main > :not(#hero) :is(.culture-hero,.religion-hero,.events-hero)::before,
+html.book-reading main > :not(#hero) :is(.culture-hero,.religion-hero,.events-hero)::after { background: none !important; }
+html.book-reading main > :not(#hero) :is(p,h2,h3,h4)::first-letter { color: inherit !important; }

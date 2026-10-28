@@ -1,0 +1,21 @@
+/* =========================================================
+   MONOGRAFIA BUSTUCHIN — ARHITECTURĂ CSS
+   Ordinea importurilor păstrează intenționat cascada site-ului.
+   01 — fundație, variabile și componente comune
+   02 — hartă interactivă și controale geografice
+   03 — capitole și componente editoriale
+   04 — adaptări responsive generale
+   05 — sistem vizual unitar și finisaje finale
+   06 — instalarea aplicației
+   07 — prezentarea fotografiilor
+========================================================= */
+@import url("css/01-foundation-components.css");
+@import url("css/02-map.css");
+@import url("css/03-editorial-chapters.css");
+@import url("css/04-responsive.css");
+@import url("css/05-refinements.css");
+@import url("css/06-install.css");
+
+@import url("css/07-photography.css");
+
+@import url("css/08-reading-accessibility.css");

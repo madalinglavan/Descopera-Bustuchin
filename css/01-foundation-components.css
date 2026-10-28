@@ -1,0 +1,1789 @@
+/* =========================================================
+   ROOT
+========================================================= */
+:root{
+  --bg-primary:#020617;
+  --bg-secondary:#0f172a;
+  --surface:rgba(255,255,255,.05);
+  --border:rgba(255,255,255,.08);
+  --text:#ffffff;
+  --muted:#94a3b8;
+  --blue:#2563eb;
+  --blue-dark:#1d4ed8;
+  --red:#dc2626;
+  --red-dark:#991b1b;
+  --radius:24px;
+  --transition:.35s ease;
+}
+/* =========================================================
+   RESET
+========================================================= */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+html{
+  scroll-behavior:smooth;
+}
+/* =========================================================
+   PAGE BACKGROUND
+========================================================= */
+body {
+  position: relative;
+  min-height: 100vh;
+  font-family:
+    "Poppins",
+    sans-serif;
+  color: var(--text);
+  overflow-x: hidden;
+  background:
+    radial-gradient(
+      circle at 8% 12%,
+      rgba(37, 99, 235, 0.18),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 92% 28%,
+      rgba(124, 58, 237, 0.14),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 18% 68%,
+      rgba(14, 165, 233, 0.11),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 88% 88%,
+      rgba(16, 185, 129, 0.1),
+      transparent 28%
+    ),
+    linear-gradient(
+      145deg,
+      #060b16 0%,
+      #0a1222 38%,
+      #0d1729 68%,
+      #070d18 100%
+    );
+  background-attachment: fixed;
+}
+/* Lumină ambientală */
+body::before {
+  content: "";
+  position: fixed;
+  top: -20%;
+  left: -15%;
+  z-index: -1;
+  width: 65vw;
+  height: 65vw;
+  border-radius: 50%;
+  background:
+    radial-gradient(
+      circle,
+      rgba(59, 130, 246, 0.14),
+      rgba(59, 130, 246, 0.04) 38%,
+      transparent 70%
+    );
+  filter: blur(20px);
+  pointer-events: none;
+  animation:
+    backgroundGlow 16s ease-in-out infinite alternate;
+}
+/* Textură discretă tip grilă */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.2;
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px
+    );
+  background-size: 55px 55px;
+  mask-image:
+    linear-gradient(
+      to bottom,
+      transparent,
+      black 15%,
+      black 85%,
+      transparent
+    );
+  -webkit-mask-image:
+    linear-gradient(
+      to bottom,
+      transparent,
+      black 15%,
+      black 85%,
+      transparent
+    );
+}
+@keyframes backgroundGlow {
+  0% {
+    transform:
+      translate3d(0, 0, 0)
+      scale(1);
+  }
+  50% {
+    transform:
+      translate3d(12vw, 8vh, 0)
+      scale(1.12);
+  }
+  100% {
+    transform:
+      translate3d(5vw, 18vh, 0)
+      scale(0.95);
+  }
+}
+/* =========================================================
+   GLOBAL COMPONENTS
+========================================================= */
+.container {
+  width: min(90%, 1800px);
+  margin-inline: auto;
+}
+.section{
+  position:relative;
+  scroll-margin-top:120px;
+  padding:120px 0;
+}
+/* =========================================================
+   BUTTON
+========================================================= */
+.button{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  padding:16px 28px;
+  border:none;
+  border-radius:999px;
+  cursor:pointer;
+  font-size:1rem;
+  font-weight:600;
+  color:white;
+  transition:var(--transition);
+  text-decoration:none;
+}
+.button:hover{
+  transform:
+  translateY(-4px)
+  scale(1.03);
+}
+.button--hero{
+  backdrop-filter:blur(16px);
+}
+.button--play{
+  background:
+  linear-gradient(
+    135deg,
+    var(--blue),
+    var(--blue-dark)
+  );
+}
+.button--stop{
+  background:
+  linear-gradient(
+    135deg,
+    var(--red),
+    var(--red-dark)
+  );
+}
+/* =========================================================
+   NAVBAR
+========================================================= */
+.navbar{
+  position:fixed;
+  top:12px;
+  left:50%;
+  transform:translateX(-50%);
+  width:min(90%);
+  z-index:1000;
+  border-radius:16px;
+  transition:var(--transition);
+}
+.navbar.scrolled{
+  background:
+  rgba(15,23,42,.72);
+  backdrop-filter:blur(12px);
+  border:
+  1px solid var(--border);
+  box-shadow:
+  0 20px 50px rgba(0,0,0,.35);
+}
+.navbar .container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* =========================================================
+   LOGO
+========================================================= */
+.logo-link{
+  text-decoration:none;
+}
+.logo{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  text-decoration: none;
+}
+.logo img{
+  width:auto;
+  height:65px;
+  flex-shrink:0;
+}
+.logo span{
+  font-size:.9rem;
+  font-weight:600;
+  color:white;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "DM Serif Display", serif;
+  font-style: italic;
+  margin-right: 25px;
+}
+/* =========================================================
+   NAV LINKS
+========================================================= */
+.nav__links{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.nav__links > a,
+.dropdown-trigger{
+  display:flex;
+  text-align:center ;
+  align-items:center;
+  gap:5px;
+  padding:14px 18px;
+  border-radius:18px;
+  text-decoration:none;
+  color:white;
+  font-weight:500;
+  transition:var(--transition);
+  font-size: .92rem;
+}
+.nav__links > a:hover,
+.dropdown-trigger:hover{
+  background:
+  rgba(255,255,255,.06);
+}
+/* =========================================================
+   DROPDOWN
+========================================================= */
+.nav__dropdown{
+  position:relative;
+}
+ .arrow{
+  transition:
+    transform .35s cubic-bezier(.22,1,.36,1);
+}
+.nav__dropdown.active .arrow{
+  transform:rotate(180deg);
+}
+/* ACTIVE DROPDOWN TRIGGER */
+.nav__dropdown.active .dropdown-trigger{
+  background:
+  rgba(37,99,235,.15);
+  border:
+  1px solid rgba(96,165,250,.35);
+  color:#60a5fa;
+  box-shadow:
+  0 10px 30px rgba(37,99,235,.15);
+  transform:translateY(-12px);
+}
+.nav__dropdown.active .dropdown-trigger i{
+  color:#60a5fa;
+}
+.nav__dropdown-menu{
+  position:absolute;
+  top:120%;
+  left:0;
+  min-width:260px;
+  padding:14px;
+  border-radius:24px;
+  background:
+  rgba(15,23,42,.92);
+  backdrop-filter:blur(12px);
+  border:
+  1px solid var(--border);
+  opacity:0;
+  visibility:hidden;
+  transform:translateY(10px);
+  transition:var(--transition);
+}
+.nav__dropdown.active .nav__dropdown-menu{
+  opacity:1;
+  visibility:visible;
+  transform:translateY(0);
+}
+.nav__dropdown-menu a{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:14px 16px;
+  border-radius:16px;
+  text-decoration:none;
+  color:white;
+  transition:var(--transition);
+}
+.nav__dropdown-menu a:hover{
+  background:
+  rgba(255,255,255,.05);
+  transform:translateX(6px);
+}
+/* DESKTOP */
+@media (hover:hover) and (pointer:fine){
+  .nav__dropdown:hover .nav__dropdown-menu{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+  }
+}
+/* =========================================================
+   NAVBAR RESPONSIVE — DESKTOP / TABLET
+========================================================= */
+.navbar {
+  width: 90%;
+}
+.nav__links > a,
+.dropdown-trigger {
+  white-space: nowrap;
+}
+/* =========================================================
+   HERO
+========================================================= */
+.hero {
+  position: relative;
+  min-height: 100svh;
+  overflow: hidden;
+  isolation: isolate;
+}
+/* =========================================================
+   HERO BACKGROUND
+========================================================= */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+.hero-bg img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter:
+    brightness(.6);
+  animation:
+    heroZoom 8s ease forwards;
+}
+/* =========================================================
+   HERO BACKGROUND ANIMATION
+========================================================= */
+@keyframes heroZoom {
+  from {
+    transform:
+      scale(1);
+  }
+  to {
+    transform:
+      scale(1.08);
+  }
+}
+/* =========================================================
+   HERO VIDEO
+========================================================= */
+.hero-video {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  background:
+    #000;
+  transition:
+    opacity .45s ease,
+    visibility .45s ease;
+}
+/* VIDEO ACTIV */
+.hero.is-video-playing .hero-video {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+/* =========================================================
+   HERO VIDEO IFRAME
+========================================================= */
+.hero-video iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+/* =========================================================
+   HERO OVERLAY
+========================================================= */
+.hero__overlay {
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  z-index: 2;
+  width:
+    min(700px, 84%);
+  max-width:
+    700px;
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  transform:
+    translateY(-50%);
+  transition:
+    opacity .35s ease,
+    transform .35s ease,
+    visibility .35s ease;
+}
+/* OVERLAY ASCUNS CÂND VIDEOCLIPUL RULEAZĂ */
+.hero.is-video-playing .hero__overlay {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform:
+    translateY(-45%);
+}
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+.hero__content h1 {
+  margin-bottom:
+    20px;
+  font-size:
+    clamp(3rem, 12vw, 4rem);
+  line-height:
+    .95;
+  text-shadow:
+    2px 1px rgba(0, 0, 0, .692);
+}
+.hero__content h2 {
+  margin-bottom:
+    10px;
+  font-style:
+    italic;
+  text-shadow:
+    2px 1px rgba(0, 0, 0, .692);
+}
+.hero__content h1 span {
+  font-size:
+    1.8rem;
+}
+.hero__content p {
+  font-size:
+    1.4rem;
+  line-height:
+    1.8;
+  color:
+    var(--text);
+  text-shadow:
+    2px 1px rgba(0, 0, 0, .692);
+}
+/* =========================================================
+   HERO ACTIONS
+========================================================= */
+.hero__actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-top:
+    40px;
+}
+/* =========================================================
+   BURGER
+========================================================= */
+.nav__toggle{
+  display:none;
+  width:52px;
+  height:52px;
+  border-radius:16px;
+  background:
+  rgba(255,255,255,.06);
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  gap:5px;
+  cursor:pointer;
+}
+.nav__toggle span{
+  width:24px;
+  height:2px;
+  background:white;
+  transition:var(--transition);
+}
+.nav__toggle.active span:nth-child(1){
+  transform:
+  rotate(45deg)
+  translate(5px,5px);
+}
+.nav__toggle.active span:nth-child(2){
+  opacity:0;
+}
+.nav__toggle.active span:nth-child(3){
+  transform:
+  rotate(-45deg)
+  translate(5px,-5px);
+}
+/* =========================================================
+   UTILITIES
+========================================================= */
+.hidden{
+  display:none !important;
+}
+body.menu-open{
+  overflow:hidden;
+  touch-action:none;
+}
+.button:focus-visible,
+.nav__links a:focus-visible{
+  outline:2px solid #60a5fa;
+  outline-offset:4px;
+}
+.dropdown-trigger{
+  border:none;
+  background:none;
+  cursor:pointer;
+}
+/* =========================================================
+   VILLAGES
+========================================================= */
+.villages{
+  display:flex;
+  flex-direction:column;
+  gap:140px;
+}
+.village{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:80px;
+  align-items:center;
+  justify-content: center;
+  justify-items: center;
+}
+/* =========================================================
+   MEDIA CARD
+========================================================= */
+/* PREVIEW */
+/* =========================================================
+   GEOGRAFIE SECTION
+========================================================= */
+.section--geografie{
+  position:relative;
+  overflow:hidden;
+}
+/* BACKGROUND EFFECT */
+.section--geografie::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+  radial-gradient(
+    circle at top left,
+    rgba(37,99,235,.12),
+    transparent 45%
+  );
+  pointer-events:none;
+}
+/* =========================================================
+   SECTION HEADER
+========================================================= */
+.section-header{
+  justify-items: center;
+  max-width:80%;
+  margin:0 auto 140px;
+}
+/* =========================================================
+   KICKER
+========================================================= */
+/* =========================================================
+   WELCOME SIGN
+========================================================= */
+.section-kicker-top {
+  position: relative;
+  display: table;
+  margin:
+    0 auto
+    45px;
+  padding:
+    16px
+    38px
+    20px;
+  overflow: hidden;
+  border-radius: 14px;
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(59, 130, 246, 0.12),
+      transparent 55%
+    ),
+    linear-gradient(
+      145deg,
+      rgba(30, 41, 59, 0.96),
+      rgba(15, 23, 42, 0.98)
+    );
+  border:
+    1px solid rgba(255, 255, 255, 0.12);
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  color: #fff;
+  font-size:
+    clamp(1rem, 2vw, 1.45rem);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-align: center;
+  transform-origin: center;
+  opacity: 0;
+  transform:
+    translateY(-35px)
+    rotate(-4deg)
+    scale(0.94);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+/* =========================================================
+   TRICOLORUL ROMÂNIEI
+========================================================= */
+.section-kicker-top::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 6px;
+  background:
+    linear-gradient(
+      90deg,
+      #002b7f 0%,
+      #002b7f 33.333%,
+      #fcd116 33.333%,
+      #fcd116 66.666%,
+      #ce1126 66.666%,
+      #ce1126 100%
+    );
+  box-shadow:
+    0 -4px 18px rgba(255,255,255,.08);
+  pointer-events: none;
+}
+/* =========================================================
+   WELCOME SIGN - VISIBLE
+========================================================= */
+.section-kicker-top.is-visible {
+  animation:
+    welcomeSignEnter 1.2s
+    cubic-bezier(.22,1,.36,1)
+    forwards;
+}
+/* =========================================================
+   HOVER
+========================================================= */
+.section-kicker-top:hover {
+  transform:
+    translateY(-4px)
+    rotate(.4deg);
+  border-color:
+    rgba(245,200,110,.45);
+  box-shadow:
+    0 25px 55px rgba(0,0,0,.42),
+    0 0 30px rgba(245,200,110,.08);
+}
+/* =========================================================
+   ENTRANCE ANIMATION
+========================================================= */
+@keyframes welcomeSignEnter {
+  0% {
+    opacity: 0;
+    transform:
+      translateY(-35px)
+      rotate(-4deg)
+      scale(.94);
+  }
+  55% {
+    opacity: 1;
+    transform:
+      translateY(4px)
+      rotate(2deg)
+      scale(1.01);
+  }
+  75% {
+    transform:
+      translateY(-2px)
+      rotate(-1deg);
+  }
+  100% {
+    opacity: 1;
+    transform:
+      translateY(0)
+      rotate(0)
+      scale(1);
+  }
+}
+/* =========================================================
+   HARTA COMUNEI — TITLE
+========================================================= */
+#harta-comunei .section-header {
+  margin-bottom: 10px;
+  text-align: center;
+}
+#harta-comunei .section-title {
+  margin-bottom: 0;
+  font-size: 1.6rem;
+}
+.section-title {
+  font-family:
+    "DM Serif Display",
+    serif;
+  font-size:
+    clamp(2.7rem, 5vw, 5rem);
+  font-weight:
+    400;
+  line-height:
+    1;
+  letter-spacing:
+    -.03em;
+  text-wrap:
+    balance;
+}
+/* DESCRIPTION */
+.section-description{
+  font-size:1.15rem;
+  line-height:1.9;
+  color:var(--muted);
+  font-style: italic;
+}
+/* =========================================================
+   SECTION CONTENT
+========================================================= */
+.section-content{
+  display:flex;
+  flex-direction:column;
+  gap:160px;
+}
+/* =========================================================
+   SUBSECTION
+========================================================= */
+.subsection{
+  position:relative;
+}
+/* =========================================================
+   SPLIT LAYOUT
+========================================================= */
+.split-layout{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:100px;
+  align-items:center;
+}
+/* =========================================================
+   CONTENT BLOCK
+========================================================= */
+.section-block__content{
+  position:relative;
+  z-index:2;
+}
+/* =========================================================
+   TOPONIMIE
+========================================================= */
+.toponimie{
+  width:90vw;
+  max-width:1600px;
+  position:relative;
+  left:50%;
+  transform:translateX(-50%);
+  display:grid;
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+  gap:24px;
+  align-items:stretch;
+}
+/* fiecare subsecțiune devine un card */
+.toponimie > .subsection{
+  width:100%;
+  min-width:0;
+  background-color: #ffffff34;
+  display:block;
+  padding: 15px 2px;
+  border-radius: 14px;
+  text-shadow: 1px 2px black;
+}
+/* content-ul ocupă tot cardul */
+.toponimie .section-block__content{
+  width:100%;
+}
+/* TITLE */
+/* =========================================================
+   TITLURI INTERNE — STIL MONOGRAFIE DIGITALĂ
+========================================================= */
+.section-block__title {
+  position: relative;
+  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 34px;
+  padding-bottom: 16px;
+  font-family:
+    "DM Serif Display",
+    serif;
+  font-size:
+    clamp(2rem, 3.4vw, 3.6rem);
+  font-weight:
+    400;
+  line-height:
+    1.02;
+  letter-spacing:
+    -.025em;
+  color:
+    #ffffff;
+  text-wrap:
+    balance;
+}
+/* =========================================================
+   ACCENT SUB TITLU
+========================================================= */
+.section-block__title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 62px;
+  height: 2px;
+  border-radius: 999px;
+  background:
+    linear-gradient(
+      90deg,
+      #60a5fa,
+      rgba(96, 165, 250, 0)
+    );
+  box-shadow:
+    0 0 10px rgba(96, 165, 250, .25);
+}
+/* =========================================================
+   MIC ACCENT DE CULOARE
+========================================================= */
+.section-block__title::first-letter {
+  color:
+    #dbeafe;
+}
+/* TEXT */
+.section-block__text{
+  font-size:1.05rem;
+  line-height:1.95;
+  color:var(--muted);
+  margin-bottom:24px;
+}
+/* =========================================================
+   MEDIA
+========================================================= */
+.section-block__media{
+  position:relative;
+}
+/* FRAME */
+.media-frame{
+  overflow:hidden;
+  border-radius:36px;
+  border:
+  1px solid rgba(255,255,255,.08);
+  background:
+  rgba(255,255,255,.03);
+  box-shadow:
+  0 30px 80px rgba(0,0,0,.35);
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+}
+/* IMAGE */
+.media-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition:
+    transform 1.2s ease;
+}
+/* IMAGE HOVER */
+.media-frame:hover img{
+  transform:scale(1.05);
+}
+/* =========================================================
+   STATS
+========================================================= */
+.stats{
+  display:flex;
+  gap:2px;
+  text-align: center;
+}
+/* ITEM */
+.stats__item{
+  position:relative;
+  min-width:150px;
+  padding:8px;
+  border-radius:28px;
+  overflow:hidden;
+  background:
+  linear-gradient(
+    180deg,
+    rgba(255,255,255,.05),
+    rgba(255,255,255,.02)
+  );
+  border:
+  1px solid rgba(255,255,255,.08);
+  backdrop-filter:blur(14px);
+  transition:.45s cubic-bezier(.22,1,.36,1);
+}
+/* LIGHT EFFECT */
+.stats__item::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+  linear-gradient(
+    135deg,
+    rgba(96,165,250,.15),
+    transparent
+  );
+  opacity:0;
+  transition:var(--transition);
+}
+/* HOVER */
+.stats__item:hover{
+  transform:
+  translateY(-8px)
+  scale(1.02);
+  border-color:
+  rgba(96,165,250,.25);
+}
+.stats__item:hover::before{
+  opacity:1;
+}
+/* NUMBER */
+.stats__number{
+  display:block;
+  font-size:1.3rem;
+  font-weight:700;
+  line-height:1;
+  color:#60a5fa;
+}
+/* LABEL */
+.stats__label{
+  color:var(--muted);
+  font-size:.65rem;
+}
+/* =========================================================
+   REVEAL ON SCROLL
+========================================================= */
+.reveal {
+  opacity: 0;
+  transform:
+    translateY(40px);
+  transition:
+    opacity .8s cubic-bezier(.22, 1, .36, 1),
+    transform .8s cubic-bezier(.22, 1, .36, 1);
+}
+.reveal.active {
+  opacity: 1;
+  transform:
+    translateY(0);
+}
+.reveal.active{
+  opacity:1;
+  transform:
+  translateY(0);
+}
+/* =========================================================
+   GEOGRAFIE IMAGE OVERLAY
+========================================================= */
+.section-block__media::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+  linear-gradient(
+    to top,
+    rgba(2,6,23,.35),
+    transparent 50%
+  );
+  pointer-events:none;
+}
+/* =========================================================
+   INTRO SECTION
+========================================================= */
+.intro-section{
+  position:relative;
+  overflow:hidden;
+}
+.intro-section::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+  linear-gradient(
+    rgba(2,6,23,.88),
+    rgba(2,6,23,.92)
+  ),
+  url("../img/discover.webp");
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
+  opacity:.55;
+  pointer-events:none;
+}
+.intro-section .container{
+  position:relative;
+  z-index:2;
+}
+/* =========================================================
+   WEATHER
+========================================================= */
+.weather-grid{
+  display:grid;
+  grid-template-columns:
+    repeat(auto-fit,minmax(150px,1fr));
+  gap:14px;
+  width:90%;
+  margin-inline:auto;
+}
+/* CARD PROGNOZĂ */
+.weather-card{
+  padding:18px;
+  border-radius:20px;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,.05),
+      rgba(255,255,255,.02)
+    );
+  border:
+    1px solid rgba(255,255,255,.08);
+  backdrop-filter:blur(12px);
+  transition:var(--transition);
+  text-align:center;
+}
+.weather-card:hover{
+  transform:translateY(-5px);
+  border-color:
+    rgba(96,165,250,.25);
+}
+/* ZI */
+.weather-day{
+  font-size:1rem;
+  font-weight:600;
+  margin-bottom:8px;
+  text-transform:capitalize;
+}
+/* DESCRIERE */
+.weather-desc{
+  color:var(--muted);
+  font-size:1rem;
+  line-height:1.4;
+}
+/* ICON */
+.weather-icon{
+  width:48px;
+  height:48px;
+  margin-bottom:6px;
+}
+/* =========================================================
+   CURRENT WEATHER
+========================================================= */
+.weather-current{
+ width:90%;
+  margin:
+    0 auto
+    30px;
+  padding:24px;
+  border-radius:24px;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,.05),
+      rgba(255,255,255,.02)
+    );
+  border:
+    1px solid rgba(255,255,255,.08);
+  backdrop-filter:blur(14px);
+  display:grid;
+  grid-template-columns:
+    3fr 1fr;
+  gap:24px;
+  align-items:center;
+}
+/* =========================================================
+   CURRENT WEATHER MAIN
+========================================================= */
+.weather-current__main{
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
+/* ICON PRINCIPAL */
+.weather-current__icon{
+  width:72px;
+  height:72px;
+  flex-shrink:0;
+}
+/* TEMPERATURĂ PRINCIPALĂ */
+.weather-current__temp{
+  font-size:3rem;
+  font-weight:700;
+  line-height:1;
+  color:#60a5fa;
+}
+/* DESCRIERE */
+.weather-current__desc{
+  margin-top:6px;
+  color:var(--muted);
+  font-size:.9rem;
+  text-transform:capitalize;
+}
+/* =========================================================
+   WEATHER DETAILS
+========================================================= */
+.weather-current__details{
+  display:grid;
+  grid-template-columns:
+    repeat(2,1fr);
+  gap:10px;
+}
+/* DETAIL CARD */
+.weather-detail{
+  padding:12px 14px;
+  border-radius:14px;
+  background:
+    rgba(255,255,255,.04);
+  border:
+    1px solid rgba(255,255,255,.06);
+}
+.weather-detail span{
+  display:block;
+}
+/* LABEL */
+.weather-detail__label{
+  color:var(--muted);
+  font-size:.9rem;
+  margin-bottom:4px;
+}
+/* VALUE */
+.weather-detail__value{
+  font-size:.95rem;
+  font-weight:600;
+}
+/* MAX / MIN */
+.weather-max{
+  color:#22c55e;
+}
+.weather-min{
+  color:#60a5fa;
+}
+/* =========================================================
+   VIDEO PREVIEW
+========================================================= */
+.video-preview {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 24px;
+  margin-top: 30px;
+  cursor: pointer;
+  background: #000;
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.25);
+}
+.video-preview img,
+.video-preview iframe {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+  object-fit: cover;
+}
+.play-btn{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:
+    translate(-50%,-50%);
+  width:80px;
+  height:80px;
+  border:none;
+  border-radius:50%;
+  background:
+    rgba(220,38,38,.85);
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:2rem;
+  cursor:pointer;
+  transition:.3s ease;
+  z-index:2;
+}
+.play-btn:hover{
+  transform:
+    translate(-50%,-50%)
+    scale(1.08);
+}
+/* ==========================================
+   SOCIETATE SI PROPRIETATE
+========================================== */
+#societate-proprietate {
+    padding: 100px 0;
+    background: #a79e7d8a;
+}
+#societate-proprietate .container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+#societate-proprietate .section-header {
+    text-align: center;
+    max-width: 850px;
+    margin: 0 auto 70px;
+}
+#societate-proprietate .section-subtitle {
+    display: inline-block;
+    color: #f8f8f8;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+#societate-proprietate h2 {
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+    color: #1f2937;
+    margin-bottom: 20px;
+}
+#societate-proprietate .section-header p {
+    color: #fdfdfd;
+    line-height: 1.8;
+    font-size: 1.05rem;
+    font-style: italic;
+}
+/* GRID */
+.history-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 30px;
+}
+/* CARD */
+.history-card {
+  background:
+    rgba(255,255,255,.03);
+  border:
+    1px solid rgba(255,255,255,.08);
+  padding: 35px;
+  border-radius: 18px;
+  border-top:
+    5px solid #8c6b3f;
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.06);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+  position: relative;
+  overflow: hidden;
+}
+.history-card::before {
+    content: "";
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: rgba(140,107,63,0.06);
+}
+/* TITLU */
+.history-card h3 {
+    font-size: 1.4rem;
+    color: #ffffff;
+    margin-bottom: 18px;
+    line-height: 1.3;
+    position: relative;
+    padding-bottom: 12px;
+}
+.history-card h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 3px;
+    background: #8c6b3f;
+    border-radius: 20px;
+}
+/* PARAGRAFE */
+.history-card p {
+    color: #ffffff;
+    line-height: 1.9;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+.history-card p:last-child {
+    margin-bottom: 0;
+}
+/* =========================================================
+   HISTORY CARD — REVEAL ON SCROLL
+========================================================= */
+.history-card {
+  opacity: 0;
+  transform:
+    translateY(30px);
+  transition:
+    opacity .7s ease,
+    transform .7s ease,
+    box-shadow .35s ease;
+}
+/* CARD VIZIBIL */
+.history-card.active {
+  opacity: 1;
+  transform:
+    translateY(0);
+}
+/* HOVER DOAR DUPĂ APARIȚIE */
+.history-card.active:hover {
+  transform:
+    translateY(-8px);
+  box-shadow:
+    0 18px 40px rgba(0,0,0,0.12);
+}
+.history-year {
+    display: inline-block;
+    background: #8c6b3f;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+/* ==========================================
+   INTRODUCERE BUSTUCHIN
+========================================== */
+.intro-section .section-description{
+  max-width:900px;
+  margin-inline:auto;
+}
+.intro-section .stats{
+  margin-top:30px;
+  margin-bottom:20px;
+}
+.intro-section .stats__item{
+  position:relative;
+  overflow:hidden;
+}
+.intro-section .stats__item::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(255,255,255,.05),
+      transparent 60%
+    );
+  pointer-events:none;
+}
+.intro-section .stats__item:hover{
+  transform:translateY(-6px);
+}
+/* =========================================================
+   PAGE NAVIGATION TRANSITION
+========================================================= */
+.page-transition{
+  position:fixed;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:
+    radial-gradient(
+      circle at center,
+      rgb(15, 23, 42),
+      rgba(2,6,23,.98)
+    );
+  z-index:99999;
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+  transition:
+    opacity .3s ease,
+    visibility .3s ease;
+}
+/* ACTIVE */
+.page-transition.active{
+  opacity:1;
+  visibility:visible;
+}
+/* CONTENT */
+.page-transition__content{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:20px;
+  transform:scale(.85);
+  opacity:0;
+  transition:
+    transform .4s cubic-bezier(.2,.8,.2,1),
+    opacity .4s ease;
+}
+.page-transition.active
+.page-transition__content{
+  transform:scale(1);
+  opacity:1;
+}
+/* LOGO */
+.page-transition__logo{
+  width:120px;
+  height:120px;
+  object-fit:contain;
+  filter:
+    drop-shadow(
+      0 15px 35px rgba(0,0,0,.4)
+    );
+  animation:
+    transitionLogoPulse 1.4s
+    ease-in-out infinite;
+}
+/* TEXT */
+.page-transition__text{
+  font-size:.8rem;
+  font-weight:700;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.75);
+}
+/* LOGO ANIMATION */
+@keyframes transitionLogoPulse{
+  0%,
+  100%{
+    transform:scale(1);
+    opacity:.85;
+  }
+  50%{
+    transform:scale(1.08);
+    opacity:1;
+  }
+}
+/* ACCESSIBILITY */
+@media(prefers-reduced-motion:reduce){
+  .page-transition,
+  .page-transition__content{
+    transition:none;
+  }
+  .page-transition__logo{
+    animation:none;
+  }
+}
+/* =========================================================
+   CARD
+========================================================= */
+.info-grid--timeline .info-card {
+  --card-color: 96, 165, 250;
+  position: relative;
+  z-index: 1;
+  min-height: 320px;
+  padding: 82px 28px 30px;
+  overflow: hidden;
+  border:
+    1px solid rgba(var(--card-color), 0.22);
+  border-radius: 28px;
+  background:
+    radial-gradient(
+      circle at 20% 0%,
+      rgba(var(--card-color), 0.18),
+      transparent 38%
+    ),
+    linear-gradient(
+      145deg,
+      rgba(30, 41, 59, 0.88),
+      rgba(15, 23, 42, 0.96)
+    );
+  box-shadow:
+    0 24px 55px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(14px);
+  isolation: isolate;
+  transition:
+    translate 0.4s cubic-bezier(.22, 1, .36, 1),
+    border-color 0.4s ease,
+    box-shadow 0.4s ease;
+}
+/* Linie colorată în partea de sus */
+.info-grid--timeline .info-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 20%;
+  width: 60%;
+  height: 3px;
+  border-radius: 0 0 10px 10px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgb(var(--card-color)),
+    transparent
+  );
+  box-shadow:
+    0 0 16px rgba(var(--card-color), 0.7);
+  transition:
+    left 0.4s ease,
+    width 0.4s ease;
+}
+/* Reflexie decorativă */
+.info-grid--timeline .info-card::after {
+  content: "";
+  position: absolute;
+  right: -80px;
+  bottom: -90px;
+  width: 190px;
+  height: 190px;
+  z-index: -1;
+  border-radius: 50%;
+  background:
+    radial-gradient(
+      circle,
+      rgba(var(--card-color), 0.2),
+      transparent 68%
+    );
+  transition:
+    transform 0.5s ease,
+    opacity 0.5s ease;
+}
+/* =========================================================
+   ICON
+========================================================= */
+.info-grid--timeline .info-card__icon {
+  position: absolute;
+  top: 20px;
+  left: 28px;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border:
+    1px solid rgba(var(--card-color), 0.35);
+  border-radius: 15px;
+  color: rgb(var(--card-color));
+  background:
+    linear-gradient(
+      145deg,
+      rgba(var(--card-color), 0.22),
+      rgba(var(--card-color), 0.06)
+    );
+  box-shadow:
+    0 12px 30px rgba(var(--card-color), 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  transition:
+    transform 0.4s cubic-bezier(.22, 1, .36, 1),
+    background 0.4s ease,
+    box-shadow 0.4s ease;
+}
+.info-grid--timeline .info-card__icon i {
+  font-size: 1.15rem;
+}
+/* Punctul cronologiei */
+.info-grid--timeline .info-card__icon::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -31px;
+  width: 9px;
+  height: 9px;
+  border:
+    2px solid rgba(15, 23, 42, 1);
+  border-radius: 50%;
+  background:
+    rgb(var(--card-color));
+  box-shadow:
+    0 0 12px rgba(var(--card-color), 0.9);
+}
+/* =========================================================
+   ANUL
+========================================================= */
+.info-grid--timeline .info-card h4 {
+  position: relative;
+  display: inline-block;
+  margin: 0 0 20px;
+  font-family:
+    "DM Serif Display",
+    serif;
+  font-size:
+    clamp(2.2rem, 3vw, 3.2rem);
+  line-height: 1;
+  font-weight: 400;
+  color: white;
+  letter-spacing: -0.04em;
+  text-shadow:
+    0 5px 22px rgba(var(--card-color), 0.25);
+}
+/* Linie mică sub an */
+.info-grid--timeline .info-card h4::after {
+  content: "";
+  display: block;
+  width: 42px;
+  height: 3px;
+  margin-top: 12px;
+  border-radius: 20px;
+  background:
+    rgb(var(--card-color));
+  box-shadow:
+    0 0 12px rgba(var(--card-color), 0.65);
+  transition:
+    width 0.4s cubic-bezier(.22, 1, .36, 1);
+}
+/* An decorativ în fundal */
+.info-grid--timeline .info-card h4::before {
+  content: attr(data-year);
+  position: absolute;
+  top: 55px;
+  right: -5px;
+  z-index: -1;
+  font-family:
+    "DM Serif Display",
+    serif;
+  font-size: 5.6rem;
+  line-height: 1;
+  color:
+    rgba(var(--card-color), 0.055);
+  pointer-events: none;
+}
+/* =========================================================
+   TEXT
+========================================================= */
+.info-grid--timeline .info-card p {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  color:
+    rgba(226, 232, 240, 0.78);
+  font-size: 0.94rem;
+  line-height: 1.85;
+  transition:
+    color 0.35s ease;
+}
+/* =========================================================
+   CULORI DIFERITE
+========================================================= */
+.info-grid--timeline .info-card:nth-child(1) {
+  --card-color: 56, 189, 248;
+}
+.info-grid--timeline .info-card:nth-child(2) {
+  --card-color: 96, 165, 250;
+}
+.info-grid--timeline .info-card:nth-child(3) {
+  --card-color: 139, 92, 246;
+}
+.info-grid--timeline .info-card:nth-child(4) {
+  --card-color: 168, 85, 247;
+}
+.info-grid--timeline .info-card:nth-child(5) {
+  --card-color: 45, 212, 191;
+}
+.info-grid--timeline .info-card:nth-child(6) {
+  --card-color: 34, 197, 94;
+}
+/* =========================================================
+   HOVER
+========================================================= */
+.info-grid--timeline .info-card:hover {
+  translate: 0 -8px;
+  border-color:
+    rgba(var(--card-color), 0.55);
+  box-shadow:
+    0 32px 75px rgba(0, 0, 0, 0.42),
+    0 0 35px rgba(var(--card-color), 0.11),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+.info-grid--timeline .info-card:hover::before {
+  left: 8%;
+  width: 84%;
+}
+.info-grid--timeline .info-card:hover::after {
+  transform: scale(1.25);
+}
+.info-grid--timeline .info-card:hover .info-card__icon {
+  transform:
+    translateY(-4px)
+    rotate(-5deg)
+    scale(1.08);
+  background:
+    rgba(var(--card-color), 0.22);
+  box-shadow:
+    0 16px 35px rgba(var(--card-color), 0.28),
+    0 0 24px rgba(var(--card-color), 0.14);
+}
+.info-grid--timeline .info-card:hover h4::after {
+  width: 76px;
+}
+.info-grid--timeline .info-card:hover p {
+  color:
+    rgba(241, 245, 249, 0.94);
+}
+/* =========================================================
+   FIX VIDEOCLIPURI — SATELE COMUNEI
+========================================================= */
+.section--villages .village__media {
+  width: 100%;
+  min-width: 0;
+  align-self: center;
+}
+.section--villages .video-preview {
+  position: relative;
+  width: 100%;
+  max-width: none;
+  aspect-ratio: 16 / 9;
+  margin-top: 0;
+  overflow: hidden;
+  border-radius: 24px;
+  background: #000;
+}
+/* Imaginea și videoclipul ocupă întregul container */
+.section--villages .video-preview img,
+.section--villages .video-preview iframe {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  object-fit: cover;
+}
+/* Păstrează proporția corectă a coloanei */
+.section--villages .village {
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1fr);
+}
+/* Elimină posibilitatea micșorării elementelor din grid */
+.section--villages .village__content,
+.section--villages .village__media {
+  min-width: 0;
+}

@@ -1,0 +1,410 @@
+{
+  "img/primarie.webp": {
+    "originalBytes": 591956,
+    "mobileBytes": 82628,
+    "variants": [
+      "img/responsive/primarie-640.webp",
+      "img/responsive/primarie-1024.webp"
+    ]
+  },
+  "img/comuna bustuchin.webp": {
+    "originalBytes": 920378,
+    "mobileBytes": 93446,
+    "variants": [
+      "img/responsive/comuna bustuchin-640.webp",
+      "img/responsive/comuna bustuchin-1024.webp"
+    ]
+  },
+  "img/bustuchin panoramic.webp": {
+    "originalBytes": 977960,
+    "mobileBytes": 108308,
+    "variants": [
+      "img/responsive/bustuchin panoramic-640.webp",
+      "img/responsive/bustuchin panoramic-1024.webp"
+    ]
+  },
+  "img/formarea comunei bustuchin.webp": {
+    "originalBytes": 768078,
+    "mobileBytes": 56728,
+    "variants": [
+      "img/responsive/formarea comunei bustuchin-640.webp",
+      "img/responsive/formarea comunei bustuchin-1024.webp"
+    ]
+  },
+  "img/cronologia formarii comunei Bustuchin.webp": {
+    "originalBytes": 610646,
+    "mobileBytes": 45512,
+    "variants": [
+      "img/responsive/cronologia formarii comunei Bustuchin-640.webp",
+      "img/responsive/cronologia formarii comunei Bustuchin-1024.webp"
+    ]
+  },
+  "img/casa batraneasca pojaru.webp": {
+    "originalBytes": 960180,
+    "mobileBytes": 93920,
+    "variants": [
+      "img/responsive/casa batraneasca pojaru-640.webp",
+      "img/responsive/casa batraneasca pojaru-1024.webp"
+    ]
+  },
+  "img/bustuchinul de altadata.webp": {
+    "originalBytes": 747816,
+    "mobileBytes": 62348,
+    "variants": [
+      "img/responsive/bustuchinul de altadata-640.webp",
+      "img/responsive/bustuchinul de altadata-1024.webp"
+    ]
+  },
+  "img/bustuchin astazi.webp": {
+    "originalBytes": 854304,
+    "mobileBytes": 78858,
+    "variants": [
+      "img/responsive/bustuchin astazi-640.webp",
+      "img/responsive/bustuchin astazi-1024.webp"
+    ]
+  },
+  "img/nunta atunci.webp": {
+    "originalBytes": 540636,
+    "mobileBytes": 73346,
+    "variants": [
+      "img/responsive/nunta atunci-640.webp",
+      "img/responsive/nunta atunci-1024.webp"
+    ]
+  },
+  "img/braul de la poiana.webp": {
+    "originalBytes": 689776,
+    "mobileBytes": 95492,
+    "variants": [
+      "img/responsive/braul de la poiana-640.webp",
+      "img/responsive/braul de la poiana-1024.webp"
+    ]
+  },
+  "img/elevi in bustuchin - promotia 1995.webp": {
+    "originalBytes": 620678,
+    "mobileBytes": 57058,
+    "variants": [
+      "img/responsive/elevi in bustuchin - promotia 1995-640.webp",
+      "img/responsive/elevi in bustuchin - promotia 1995-1024.webp"
+    ]
+  },
+  "img/sonde petroliere bustuchin.webp": {
+    "originalBytes": 2561734,
+    "mobileBytes": 94774,
+    "variants": [
+      "img/responsive/sonde petroliere bustuchin-640.webp",
+      "img/responsive/sonde petroliere bustuchin-1024.webp"
+    ]
+  },
+  "img/evolutia administrativa.webp": {
+    "originalBytes": 760248,
+    "mobileBytes": 54450,
+    "variants": [
+      "img/responsive/evolutia administrativa-640.webp",
+      "img/responsive/evolutia administrativa-1024.webp"
+    ]
+  },
+  "img/administratia locala.webp": {
+    "originalBytes": 575714,
+    "mobileBytes": 48666,
+    "variants": [
+      "img/responsive/administratia locala-640.webp",
+      "img/responsive/administratia locala-1024.webp"
+    ]
+  },
+  "img/modernizarea comunei bustuchin.webp": {
+    "originalBytes": 672828,
+    "mobileBytes": 64036,
+    "variants": [
+      "img/responsive/modernizarea comunei bustuchin-640.webp",
+      "img/responsive/modernizarea comunei bustuchin-1024.webp"
+    ]
+  },
+  "img/evolutia populatiei a comunei bustuchin.webp": {
+    "originalBytes": 718608,
+    "mobileBytes": 67342,
+    "variants": [
+      "img/responsive/evolutia populatiei a comunei bustuchin-640.webp",
+      "img/responsive/evolutia populatiei a comunei bustuchin-1024.webp"
+    ]
+  },
+  "img/bustuchin panoramic 3.webp": {
+    "originalBytes": 1140338,
+    "mobileBytes": 131930,
+    "variants": [
+      "img/responsive/bustuchin panoramic 3-640.webp",
+      "img/responsive/bustuchin panoramic 3-1024.webp"
+    ]
+  },
+  "img/cadrul geografic al comunei bustuchin.webp": {
+    "originalBytes": 737906,
+    "mobileBytes": 68470,
+    "variants": [
+      "img/responsive/cadrul geografic al comunei bustuchin-640.webp",
+      "img/responsive/cadrul geografic al comunei bustuchin-1024.webp"
+    ]
+  },
+  "img/evolutia geologica a comunei bustuchin.webp": {
+    "originalBytes": 815450,
+    "mobileBytes": 78472,
+    "variants": [
+      "img/responsive/evolutia geologica a comunei bustuchin-640.webp",
+      "img/responsive/evolutia geologica a comunei bustuchin-1024.webp"
+    ]
+  },
+  "img/bustuchin panoramic 4.webp": {
+    "originalBytes": 697972,
+    "mobileBytes": 81000,
+    "variants": [
+      "img/responsive/bustuchin panoramic 4-640.webp",
+      "img/responsive/bustuchin panoramic 4-1024.webp"
+    ]
+  },
+  "img/cadrul geografic.webp": {
+    "originalBytes": 533050,
+    "mobileBytes": 74030,
+    "variants": [
+      "img/responsive/cadrul geografic-640.webp",
+      "img/responsive/cadrul geografic-1024.webp"
+    ]
+  },
+  "img/dealul muierii.webp": {
+    "originalBytes": 533050,
+    "mobileBytes": 74030,
+    "variants": [
+      "img/responsive/dealul muierii-640.webp",
+      "img/responsive/dealul muierii-1024.webp"
+    ]
+  },
+  "img/viteza.webp": {
+    "originalBytes": 359360,
+    "mobileBytes": 77710,
+    "variants": [
+      "img/responsive/viteza-640.webp",
+      "img/responsive/viteza-1024.webp"
+    ]
+  },
+  "img/bustuchin panoramic 5.webp": {
+    "originalBytes": 1045404,
+    "mobileBytes": 92144,
+    "variants": [
+      "img/responsive/bustuchin panoramic 5-640.webp",
+      "img/responsive/bustuchin panoramic 5-1024.webp"
+    ]
+  },
+  "img/biserica batrana Pojaru.webp": {
+    "originalBytes": 561802,
+    "mobileBytes": 89494,
+    "variants": [
+      "img/responsive/biserica batrana Pojaru-640.webp",
+      "img/responsive/biserica batrana Pojaru-1024.webp"
+    ]
+  },
+  "img/Biserica de lemn Valea Pojarului.webp": {
+    "originalBytes": 609524,
+    "mobileBytes": 107018,
+    "variants": [
+      "img/responsive/Biserica de lemn Valea Pojarului-640.webp",
+      "img/responsive/Biserica de lemn Valea Pojarului-1024.webp"
+    ]
+  },
+  "img/Iustina.webp": {
+    "originalBytes": 258540,
+    "mobileBytes": 73464,
+    "variants": [
+      "img/responsive/Iustina-640.webp",
+      "img/responsive/Iustina-1024.webp"
+    ]
+  },
+  "img/stefan.webp": {
+    "originalBytes": 277202,
+    "mobileBytes": 70114,
+    "variants": [
+      "img/responsive/stefan-640.webp",
+      "img/responsive/stefan-1024.webp"
+    ]
+  },
+  "img/braul de la poiana bustuchin.webp": {
+    "originalBytes": 2743478,
+    "mobileBytes": 98500,
+    "variants": [
+      "img/responsive/braul de la poiana bustuchin-640.webp",
+      "img/responsive/braul de la poiana bustuchin-1024.webp"
+    ]
+  },
+  "img/grupul vocal Iustina Baluteanu.webp": {
+    "originalBytes": 851650,
+    "mobileBytes": 111576,
+    "variants": [
+      "img/responsive/grupul vocal Iustina Baluteanu-640.webp",
+      "img/responsive/grupul vocal Iustina Baluteanu-1024.webp"
+    ]
+  },
+  "img/zilele comunei Bustuchin.webp": {
+    "originalBytes": 518926,
+    "mobileBytes": 76014,
+    "variants": [
+      "img/responsive/zilele comunei Bustuchin-640.webp",
+      "img/responsive/zilele comunei Bustuchin-1024.webp"
+    ]
+  },
+  "img/Diploma 50 ani.webp": {
+    "originalBytes": 1012964,
+    "mobileBytes": 94410,
+    "variants": [
+      "img/responsive/Diploma 50 ani-640.webp",
+      "img/responsive/Diploma 50 ani-1024.webp"
+    ]
+  },
+  "img/ziua-persoanelor-varstnice-2025-1.webp": {
+    "originalBytes": 443552,
+    "mobileBytes": 47300,
+    "variants": [
+      "img/responsive/ziua-persoanelor-varstnice-2025-1-640.webp",
+      "img/responsive/ziua-persoanelor-varstnice-2025-1-1024.webp"
+    ]
+  },
+  "img/ziua-persoanelor-varstnice-2025-2.webp": {
+    "originalBytes": 538190,
+    "mobileBytes": 49966,
+    "variants": [
+      "img/responsive/ziua-persoanelor-varstnice-2025-2-640.webp",
+      "img/responsive/ziua-persoanelor-varstnice-2025-2-1024.webp"
+    ]
+  },
+  "img/ziua copilului.webp": {
+    "originalBytes": 608546,
+    "mobileBytes": 70278,
+    "variants": [
+      "img/responsive/ziua copilului-640.webp",
+      "img/responsive/ziua copilului-1024.webp"
+    ]
+  },
+  "img/lacurile de la poiana.webp": {
+    "originalBytes": 446950,
+    "mobileBytes": 68846,
+    "variants": [
+      "img/responsive/lacurile de la poiana-640.webp",
+      "img/responsive/lacurile de la poiana-1024.webp"
+    ]
+  },
+  "img/liceul tehnologic bustuchin.webp": {
+    "originalBytes": 810430,
+    "mobileBytes": 61320,
+    "variants": [
+      "img/responsive/liceul tehnologic bustuchin-640.webp",
+      "img/responsive/liceul tehnologic bustuchin-1024.webp"
+    ]
+  },
+  "img/scoala gimnaziala poiana seciuri.webp": {
+    "originalBytes": 968722,
+    "mobileBytes": 75402,
+    "variants": [
+      "img/responsive/scoala gimnaziala poiana seciuri-640.webp",
+      "img/responsive/scoala gimnaziala poiana seciuri-1024.webp"
+    ]
+  },
+  "img/gradinita cu program prelungit.webp": {
+    "originalBytes": 899596,
+    "mobileBytes": 66160,
+    "variants": [
+      "img/responsive/gradinita cu program prelungit-640.webp",
+      "img/responsive/gradinita cu program prelungit-1024.webp"
+    ]
+  },
+  "img/gradinita nr 2.webp": {
+    "originalBytes": 917990,
+    "mobileBytes": 73232,
+    "variants": [
+      "img/responsive/gradinita nr 2-640.webp",
+      "img/responsive/gradinita nr 2-1024.webp"
+    ]
+  },
+  "img/infrastructura-rutiera.webp": {
+    "originalBytes": 387428,
+    "mobileBytes": 26818,
+    "variants": [
+      "img/responsive/infrastructura-rutiera-640.webp",
+      "img/responsive/infrastructura-rutiera-1024.webp"
+    ]
+  },
+  "img/utilitati publice Bustuchin copy.webp": {
+    "originalBytes": 822610,
+    "mobileBytes": 83440,
+    "variants": [
+      "img/responsive/utilitati publice Bustuchin copy-640.webp",
+      "img/responsive/utilitati publice Bustuchin copy-1024.webp"
+    ]
+  },
+  "img/infrastructura-locativa.webp": {
+    "originalBytes": 444974,
+    "mobileBytes": 51622,
+    "variants": [
+      "img/responsive/infrastructura-locativa-640.webp",
+      "img/responsive/infrastructura-locativa-1024.webp"
+    ]
+  },
+  "img/infrastructura-culturala-sportiva.webp": {
+    "originalBytes": 946216,
+    "mobileBytes": 68770,
+    "variants": [
+      "img/responsive/infrastructura-culturala-sportiva-640.webp",
+      "img/responsive/infrastructura-culturala-sportiva-1024.webp"
+    ]
+  },
+  "img/casa de cultura Bustuchin.webp": {
+    "originalBytes": 642596,
+    "mobileBytes": 64976,
+    "variants": [
+      "img/responsive/casa de cultura Bustuchin-640.webp",
+      "img/responsive/casa de cultura Bustuchin-1024.webp"
+    ]
+  },
+  "img/camin cultural Poiana Seciuri.webp": {
+    "originalBytes": 845732,
+    "mobileBytes": 66530,
+    "variants": [
+      "img/responsive/camin cultural Poiana Seciuri-640.webp",
+      "img/responsive/camin cultural Poiana Seciuri-1024.webp"
+    ]
+  },
+  "img/camin cultural Pojaru.webp": {
+    "originalBytes": 713914,
+    "mobileBytes": 63296,
+    "variants": [
+      "img/responsive/camin cultural Pojaru-640.webp",
+      "img/responsive/camin cultural Pojaru-1024.webp"
+    ]
+  },
+  "img/parc de joaca Bustuchin.webp": {
+    "originalBytes": 852058,
+    "mobileBytes": 82632,
+    "variants": [
+      "img/responsive/parc de joaca Bustuchin-640.webp",
+      "img/responsive/parc de joaca Bustuchin-1024.webp"
+    ]
+  },
+  "img/telecomunicatii.webp": {
+    "originalBytes": 480012,
+    "mobileBytes": 43470,
+    "variants": [
+      "img/responsive/telecomunicatii-640.webp",
+      "img/responsive/telecomunicatii-1024.webp"
+    ]
+  },
+  "img/centru medical.webp": {
+    "originalBytes": 890250,
+    "mobileBytes": 68670,
+    "variants": [
+      "img/responsive/centru medical-640.webp",
+      "img/responsive/centru medical-1024.webp"
+    ]
+  },
+  "img/centru-persoane-varstnice.webp": {
+    "originalBytes": 716726,
+    "mobileBytes": 52002,
+    "variants": [
+      "img/responsive/centru-persoane-varstnice-640.webp",
+      "img/responsive/centru-persoane-varstnice-1024.webp"
+    ]
+  }
+}
